@@ -19,3 +19,101 @@ image::./images/logo_university.png[logo_university,240]
 
 {empty} +
 {empty} +
+
+
+// Abstract
+= Abstract
+
+
+
+*Keywords:* Go, Objective C, Object Oriented Programming
+
+{empty} +
+{empty} +
+
+
+
+// Table of Content
+ 
+toc::[]
+
+
+{empty} +
+{empty} +
+
+
+
+// Acronyms
+
+= List of Abbreviations
+
+[horizontal]
+Go:: Programming Language Go
+OOP:: Object Oriented Programming
+
+{empty} +
+{empty} +
+
+
+
+// Document
+
+= 1. Introduction
+
+
+{empty} +
+{empty} +
+
+
+= 2. History of OOP
+
+
+{empty} +
+{empty} +
+
+
+= 3. Object Oriented Programming
+
+
+{empty} +
+{empty} +
+
+
+= 4. Object Oriented Programming in Objective C
+
+
+{empty} +
+{empty} +
+
+
+= 5. Object Oriented Programming in Go
+
+
+{empty} +
+{empty} +
+
+
+
+= 6. Summary
+
+
+{empty} +
+{empty} +
+
+
+// Appendix
+
+= References
+
+[horizontal]
+
+
+
+{empty} +
+{empty} +
+
+= List of Figures
+
+[horizontal]
+
+<<img-go_example_call>> :: Method call syntax in Go
