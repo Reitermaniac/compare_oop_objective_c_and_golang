@@ -1,0 +1,21 @@
+// Header
+= Comparison Object Oriented Programming in Objective-C with GO
+Thomas Martin Randl <thomas.m.randl@stud.th-rosenheim.de>
+v1.00.00, 2020-01-10
+:awestruct-layout: base
+:showtitle:
+:prev_section: defining-frontmatter
+:next_section: creating-pages
+:toc:
+:toc-placement!:
+:icons: font
+
+
+
+// Logo
+
+[#img-logo_university]
+image::./images/logo_university.png[logo_university,240]
+
+{empty} +
+{empty} +
