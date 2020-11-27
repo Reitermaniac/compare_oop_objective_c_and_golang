@@ -10,28 +10,36 @@ v1.00.00, 2020-01-10
 :toc-placement!:
 :icons: font
 
-
-
 // Logo
 
 [#img-logo_university]
-image::./images/logo_university.png[logo_university,240]
+image::./images/logo_university.png[logo_university,240,align="right"]
+
+[.text-center]
+Thomas Martin Randl
+[.text-center]
+Fakultät für Informatik
+[.text-center]
+WS 2020/21
+
 
 {empty} +
 {empty} +
+
+
 
 
 // Abstract
-= Abstract
+== Abstract
 
+ToDo
 
-
-*Keywords:* Go, Objective C, Object Oriented Programming
+*Keywords:* Go, Objective-C, Object Oriented Programming
 
 {empty} +
 {empty} +
 
-
+<<<
 
 // Table of Content
  
@@ -41,11 +49,11 @@ toc::[]
 {empty} +
 {empty} +
 
-
+<<<
 
 // Acronyms
 
-= List of Abbreviations
+== List of Abbreviations
 
 [horizontal]
 Go:: Programming Language Go
@@ -54,39 +62,38 @@ OOP:: Object Oriented Programming
 {empty} +
 {empty} +
 
-
+<<<
 
 // Document
 
-= 1. Introduction
+== 1. Introduction
+
+{empty} +
+{empty} +
+
+
+== 2. History of OOP
 
 
 {empty} +
 {empty} +
 
 
-= 2. History of OOP
+== 3. Object Oriented Programming
 
 
 {empty} +
 {empty} +
 
 
-= 3. Object Oriented Programming
+== 4. Object Oriented Programming in Objective-C
 
 
 {empty} +
 {empty} +
 
 
-= 4. Object Oriented Programming in Objective C
-
-
-{empty} +
-{empty} +
-
-
-= 5. Object Oriented Programming in Go
+== 5. Object Oriented Programming in Go
 
 
 {empty} +
@@ -94,7 +101,7 @@ OOP:: Object Oriented Programming
 
 
 
-= 6. Summary
+== 6. Summary
 
 
 {empty} +
@@ -103,7 +110,7 @@ OOP:: Object Oriented Programming
 
 // Appendix
 
-= References
+== References
 
 [horizontal]
 
@@ -112,7 +119,7 @@ OOP:: Object Oriented Programming
 {empty} +
 {empty} +
 
-= List of Figures
+== List of Figures
 
 [horizontal]
 
