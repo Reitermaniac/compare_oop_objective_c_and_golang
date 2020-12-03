@@ -9,6 +9,9 @@ v1.00.00, 2020-01-10
 :toc:
 :toc-placement!:
 :icons: font
+:source-highlighter: pygments
+:pygments-style: manni
+:pygments-linenums-mode: inline
 
 // Logo
 
@@ -146,6 +149,94 @@ Having this in mind, languages with a garbage collector are for no use in safety
 
 == 5. Object Oriented Programming in Go
 
+The programming language Go was introduced by Google in 2009. It has been develoed since by a team at google and a lot of other contributors from the open source community. The BSD style license it was released with allowed the community the further development to this day .
+
+Its initial cause was to create a language that is more accessible and save than C/C++ in terms of syntax, compile time and functionality. The focus was to develop an easier solution for scalable network services and cloud computing. 
+Whilst Go differs in many ways from the C programming language, its roots with this language are preserved in the fact, that it still uses C like pointers. But they do not support pointer arithmetic which is because of the fact, that Go puts his focus on fast compiling <<GOL20>>.
+
+Go does a balancing act between velocity and accessibility. Its purpose is to deliver a solution which is faster than competing languages like python <<WSP20>> and more accessible than the really fast languages C and C++. 
+Sadly Go does not fit well with GUI development or the development of embedded systems <<COP20>>.  
+
+In terms of OOP even Google is not sure whether or not Go is an OOP language. The total abscence of some features, which are discussed later in this chapter, could lead to the conclussion that Go simply is no OOP language. But at least it can be argued, that Go allows an OOP like style of programming <<IGO18>>. The degree to which Go differs from classic programming languages like C++ or Java will be discussed in the following chapters.
+
+{empty} +
+
+=== 5.1 Classification with Go
+
+Go does not provide a classic syntax for creating a class. Go does not provide classes. To achive a classification Go uses structs similar to structs in the C programming language. The following code snipped shows how a class is implemented in Go.
+
+.Example for a class in Go
+[source,ruby,linenums]
+----
+# This is the struct containing the attributes of the class GeoObject
+type GeoObject struct {
+	color color.Color
+	p     Position
+}
+
+# These are methods of class GeoObject
+func (g GeoObject) Paint() {
+	var s fmt.Stringer
+	s = g
+	fmt.Println(s.String())
+}
+
+func (g GeoObject) String() string {
+	return fmt.Sprintf("GeoObject: color=%v, x=%v, y=%v", g.color, g.p.x, g.p.y)
+}
+----
+
+This states out that a struct is a user defined type that can hold a list of attributes. In combination with functions using the struct as base, as shown in the snippet, Go is able to offer similar functionality than other languages using classes <<COP20>>. 
+
+{empty} +
+
+=== 5.2 Encapsulation with Go
+
+Classic OOP languages use keywords like "protected", "private" and "public" to encapsulate attributes and methods of their classes. Go does offer a different approach. 
+
+Go encapsulates on package level by differentiating between lower or upper case on the first letter of the method or struct name.
+
+.Encapsulating possibilities in Go
+[source,ruby,linenums]
+----
+# This is a public struct due to the capital letter
+type GeoObject struct {}
+
+#This is a private struct due to the lower case letter
+type position struct { x, y float64 }
+
+#This is a private method due ot the lower case letter
+func (g *GeoObject) string() string {
+    return fmt.Println("I can only be called inside my package")
+}
+
+# This is a public method due to the capital letter
+func (g *GeoObject) Draw() { 
+    fmt.Println("I can be called from outside my package")
+}
+----
+
+As is seen in the above code snippet one can make some methods of a struct private and others public. Even structs can be declared private. This allows the base concept of encapsulation even if it is not as convenient like in other OOP languages as mentioned <<IGO18>>.
+
+TIP: If you declare a method with a parameter in front of the method name you can conveniently call it like myStruct.myFunction(). The Go compiler anyway compiles it like a normal parameter after the function name. So this is just syntactic sugar which gives you the illusion to write and call a real OOP method. 
+
+{empty} +
+
+=== 5.3 Inheritance with Go
+
+
+
+{empty} +
+
+=== 5.4 Polymorphism with Go
+
+
+
+{empty} +
+
+=== 5.5 Persistence with Go
+
+
 
 {empty} +
 {empty} +
@@ -170,11 +261,23 @@ Having this in mind, languages with a garbage collector are for no use in safety
 == References
 
 [horizontal]
-OC209:: [[OC209]] Stephen G. Kochan, Objective-C 2.0, 2009, Addison-Wesley
+COP20:: [[COP20]] Johannes Weigend, Concepts of Programming Languages, called 2020-12-03, {empty} + 
+https://github.com/jweigend/concepts-of-programming-languages
 
 DEP15:: [[DEP15]] Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, Design Patterns - Entwurfsmuster als Elemente wiederverwendbarer objektorientierter Software, 2015, Mitp
 
+FAQ20:: [[FAQ20]] Website, golang.org, called 2020-12-03, {empty} +
+https://golang.org/doc/faq#Is_Go_an_object-oriented_language
+
+GOL20:: [[GOL20]] Website, golang.org, called 2020-12-03, {empty} + 
+https://golang.org/
+
 KOP09:: [[KOP09]] Arnd Poetzsch-Heffter, Konzepte objektorientierter Programmierung, Rev. 2, 2009, Springer
+
+IGO18:: [[IGO18]] Website, medium.com, called on 2019-12-03, {empty} +
+https://medium.com/gophersland/gopher-vs-object-oriented-golang-4fa62b88c701
+
+OC209:: [[OC209]] Stephen G. Kochan, Objective-C 2.0, 2009, Addison-Wesley
 
 OOT15:: [[OOT15]] Suad Alagić, Object-Oriented Technology, 2015, Springer
 
@@ -182,6 +285,9 @@ OOA15:: [[OOA15]] Brahma Dathan, Sarnath Ramnath, Object-Oriented Analysis, Desi
 
 POL20:: [[POL20]] Website, duden.de, called 2020-12-02, {empty} + 
 https://www.duden.de/rechtschreibung/Polymorphismus
+
+WSP20:: [[WSP20]] Lucas Lukac, getstream.io, called 2020-12-03, {empty} +
+https://getstream.io/blog/switched-python-go/
 
 //EOP14:: [[EOP14]] Richard Jones (Ed.), ECOOP 2014 – Object-Oriented Programming, 2014, Springer
 
