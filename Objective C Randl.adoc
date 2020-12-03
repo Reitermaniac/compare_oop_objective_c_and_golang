@@ -168,21 +168,15 @@ Go does not provide a classic syntax for creating a class. Go does not provide c
 .Example for a class in Go
 [source,ruby,linenums]
 ----
-# This is the struct containing the attributes of the class GeoObject
-type GeoObject struct {
+# This is the type containing the attributes of the class ClassA
+type ClassA struct {
 	color color.Color
-	p     Position
+	name  string
 }
 
-# These are methods of class GeoObject
-func (g GeoObject) Paint() {
-	var s fmt.Stringer
-	s = g
-	fmt.Println(s.String())
-}
-
-func (g GeoObject) String() string {
-	return fmt.Sprintf("GeoObject: color=%v, x=%v, y=%v", g.color, g.p.x, g.p.y)
+# This is a method of class ClassA
+func (c ClassA) SayName() {
+	fmt.Println(name);
 }
 ----
 
@@ -194,49 +188,105 @@ This states out that a struct is a user defined type that can hold a list of att
 
 Classic OOP languages use keywords like "protected", "private" and "public" to encapsulate attributes and methods of their classes. Go does offer a different approach. 
 
-Go encapsulates on package level by differentiating between lower or upper case on the first letter of the method or struct name.
+Go encapsulates on package level by differentiating between lower or upper case on the first letter of the method, type or interface name.
 
 .Encapsulating possibilities in Go
 [source,ruby,linenums]
 ----
 # This is a public struct due to the capital letter
-type GeoObject struct {}
+type ClassA struct {}
 
 #This is a private struct due to the lower case letter
-type position struct { x, y float64 }
+type classB struct { x, y float64 }
 
 #This is a private method due ot the lower case letter
-func (g *GeoObject) string() string {
+func (c *ClassA) string() string {
     return fmt.Println("I can only be called inside my package")
 }
 
 # This is a public method due to the capital letter
-func (g *GeoObject) Draw() { 
+func (c *ClassA) Draw() { 
     fmt.Println("I can be called from outside my package")
 }
 ----
 
-As is seen in the above code snippet one can make some methods of a struct private and others public. Even structs can be declared private. This allows the base concept of encapsulation even if it is not as convenient like in other OOP languages as mentioned <<IGO18>>.
+As is seen in the above code snippet one can make some methods of a struct private and others public. Even structs can be declared private. This allows the base concept of encapsulation even if it is not as convenient like in other OOP languages as mentioned before. Calling the encapsulating functions public or private is not completely correct, since it is more of a controll mechanism to allow the export of a function, type or interface <<IGO18>>.
 
-TIP: If you declare a method with a parameter in front of the method name you can conveniently call it like myStruct.myFunction(). The Go compiler anyway compiles it like a normal parameter after the function name. So this is just syntactic sugar which gives you the illusion to write and call a real OOP method. 
+TIP: If you declare a method with a parameter in front of the method name you can conveniently call it like for example "myStruct.myFunction()". The Go compiler compiles it like a normal parameter after the function name anyway. So this is just syntactic sugar which gives you the illusion to write and call a real OOP method <<IGO18>>. 
 
 {empty} +
 
 === 5.3 Inheritance with Go
 
+The Go programming language does not implement inheritance in any way. This beeing said Go has is own way to map relationships between types. Therefore it uses composition instead of inheritance.
 
+Languages like Java and C++ require the programmer to know the relationships of his objects at first implementation. Additonaly multiple inheritance can get very complex very fast. Therefore the developers of Go made the choice to implement a lightweight alternative, which allows the implementation of relationships between types <<FAQ20>>.
+
+.Inheritance alternative approach in Go
+[source,ruby,linenums]
+----
+# Class A
+type ClassA struct { x, y float64 }
+
+# Class B extends ClassA
+type ClassB struct { 
+    c     ClassA  # ClassB embedding a classA instance extends ClassA with the 
+    num   int     # attributes of ClassB
+}
+----
+
+That beeing said we do not speak so much of ClassA inherits from ClassB as ClassA extends ClassB by embedding a ClassB instance in the struct of ClassA. Go also supports overriding functions. Overloading a function like in Java however is not possible with Go <<COP20>>.
 
 {empty} +
 
 === 5.4 Polymorphism with Go
 
+Since Go does not support inheritance but follows the principle of composition there is a different approach to polymorphism than usual. To achieve the treatment of different objects uniformely it implements interfaces implicitly <<IGO18>>. This leads to a very intuitive approach as can be seen in the following code snipped. 
 
+.Inheritance alternative approach in Go
+[source,ruby,linenums]
+----
+# Interface for the ploymorphism methods
+type getAttributes interface {
+	getArea() float64
+}
+
+type square struct {
+	length float64
+}
+
+type rectangle struct {
+	width  float64
+	height float64
+}
+# The implementation of getArea() for square
+func (s square) getArea() float64 {
+	return s.length * 2
+}
+# The implementation of getArea() for rectangle
+func (r rectangle) getArea() float64 {
+	return r.width * r.height
+}
+# The function to call to get the output for all objects with a getArea() method
+func calcArea(a getAttributes) {
+	fmt.Println("The area of the attribute is:", a.getArea())
+}
+
+func main() {
+	s := square{length: 4}
+	r := rectangle{width: 2, height: 3}
+	calcArea(s) # The area of the attribute is: 8
+	calcArea(r) # The area of the attribute is: 6
+}
+----
+
+In this example code there are two structs that implenent the same function getArea(). Both have different approaches since rectangle and square areas are calculated differently. The interface getAttributes is basically a named collection for all method signatures defined by the interface. This interface allows the call of methods contained by it and therefore we can call the calcArea function on square and rectangle and the respective methods are called. This means that Go delivers a very intuitive way of polymorphism.
 
 {empty} +
 
 === 5.5 Persistence with Go
 
-
+As mentioned in chapter <<3.5 Persistence>> OOP languages often use a garbage collector, which is responsible for deleting unused objects. Go also makes use of such a garbage collection. This results in the fact that the programmer does not need to care about deleting objects. On the other hand is Go no fit for programming a system with high safety requirements.
 
 {empty} +
 {empty} +
