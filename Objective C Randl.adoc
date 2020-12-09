@@ -171,7 +171,7 @@ The @interface section of the class defines its name, parent class (e.g. NSObjec
 	char attribute2;
 }
 # Methods of MyClass
-- (void) setAttributes: (int) i over: (char) c;
+- (void) setAttributes: (int) i: (char) c;
 @end
 ----
 
@@ -239,12 +239,21 @@ TIP: To call a method of the class inside of another method of the same class yo
 
 === 4.3 Inheritance with Objective-C
 
+Objective-C supports multilevel inheritance. Therefore a class can inherit all methods and attributes of a parent class. On top of all classes in Objective-C is the NSObject class as root object. All classes below inherit its methods. It is also possible to overwrite functions from a parent class. This has the effect, that the new implementation for this function will be executed when called on an object from this class. The instance attributes defined in the parent class can also be accessed in the child class <<OC209>>.
 
+.Example inheritance in Objective-C
+[source,ruby,linenums]
+----
+@interface MyClass: MyParentClass
+----
+
+WARNING: Objective-C does not provide a mechanism for multiple inheritance. Therefore a class can only inherit one parentclass.
 
 {empty} +
 
 === 4.4 Polymorphism with Objective-C
 
+Objective-C supports polymorphism. The compiler is able to determine which method is called from which instance. This is due to the fact that classes encapsulate their attributes and methods and the compiler therefore knows the related object for the method even if the method name is used by other classes as well <<OC209>>.
 
 {empty} +
 
@@ -439,8 +448,6 @@ https://developer.apple.com/library/archive/documentation/General/Conceptual/Coc
 COP20:: [[COP20]] Johannes Weigend, Concepts of Programming Languages, called 2020-12-03, {empty} + 
 https://github.com/jweigend/concepts-of-programming-languages
 
-DEP15:: [[DEP15]] Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, Design Patterns - Entwurfsmuster als Elemente wiederverwendbarer objektorientierter Software, 2015, Mitp
-
 FAQ20:: [[FAQ20]] Website, golang.org, called 2020-12-03, {empty} +
 https://golang.org/doc/faq#Is_Go_an_object-oriented_language
 
@@ -454,10 +461,6 @@ https://medium.com/gophersland/gopher-vs-object-oriented-golang-4fa62b88c701
 
 OC209:: [[OC209]] Stephen G. Kochan, Objective-C 2.0, 2009, Addison-Wesley
 
-OOT15:: [[OOT15]] Suad Alagić, Object-Oriented Technology, 2015, Springer
-
-OOA15:: [[OOA15]] Brahma Dathan, Sarnath Ramnath, Object-Oriented Analysis, Design and Implementation - An Integrated Approach, Rev. 2, 2015, Springer
-
 POC20:: [[POC20]] Website, developer.apple.com, called 2020-12-09, {empty} +
 https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html
 
@@ -466,14 +469,3 @@ https://www.duden.de/rechtschreibung/Polymorphismus
 
 WSP20:: [[WSP20]] Lucas Lukac, getstream.io, called 2020-12-03, {empty} +
 https://getstream.io/blog/switched-python-go/
-
-{empty} +
-{empty} +
-
-<<<
-
-== List of Figures
-
-[horizontal]
-
-<<img-logo_university>> :: Logo ot the TH Rosenheim
