@@ -133,7 +133,7 @@ OOP uses this functionality with its inheritance (chapter <<3.3 Inheritance>>). 
 
 === 3.5 Persistence
 
-Persistence stands for the lifetime an object exists in the program after it is created. There are some different approaches depending on the used programming language. While in C++ the user is responsible for deleting the created objects after their use expired, languages like Java use a so called "garbage collector". 
+Persistence stands for the lifetime an object exists in the program after it is created. There are some different approaches depending on the used programming language. While in C{plus}{plus} the user is responsible for deleting the created objects after their use expired, languages like Java use a so called "garbage collector". 
 
 Having this in mind, languages with a garbage collector are for no use in safety related software, because a fast reaction to a problem can not be guaranteeed if the garbage collector interrupts the programm at the exact moment of a emergency. An automatic memory management on the other hand is much less bug prone due to the lower complexity <<KOP09>>.
 
@@ -154,16 +154,91 @@ To develop these applications apple provides his own integrated development envi
 
 === 4.1 Classification with Objective-C
 
+The usage of classes in Objective-C is a very common task. This is because of the fact, that it is used to develop applications and every part of an application either is an object or communicates with one. Apple provides a large library of predefined classes with the names Cocoa (Mac OS X) and Cocoa Touch (IOs). These classes can either be used directly or personalised for the applications purpose.
 
+Since everything in Objective-C can be achieved with classes they are structured very similar to Java or C{plus}{plus} classes. As can be read in chapter <<4.3 Inheritance with Objective-C>> all classes are inheritad from the root class NSObject. Every Objective-C class has an @interface and @implementation section. While the @interface usually is located in the header file .h the @implementation is implemented in the source file with the file ending .m. 
+
+The @interface section of the class defines its name, parent class (e.g. NSObject), attributes and methods. It is used to define the contents of the class and for other class instances to see what methods can be called on the objects of the class. The following example shows how this can be implemented.
+
+.Example implementation of an interface in Objective-C
+[source,ruby,linenums]
+----
+# The head of interface MyClass with parent Class NSObject
+@interface MyClass: NSObject
+{
+	# The attributes of MyClass
+	int attribute1;
+	char attribute2;
+}
+# Methods of MyClass
+- (void) setAttributes: (int) i over: (char) c;
+@end
+----
+
+The implementation of the defined methods can be done as follows.
+
+.Example implementation of the defined methods in Objective-C
+[source,ruby,linenums]
+----
+@implementation MyClass
+# Implementation of the setAttributes Method defined in @interface
+- (void) setAttributes: (int) i: (char) c
+{
+	attribute1 = i;
+	attribute2 = c;
+}
+@end
+----
+
+To create a instance of a class in Objective-C you have to allocate memory and initialize it first. Afterwards you can interact with the object. If your class does not provide an own init function the init function calls the NSObjects init function as default. The alloc function is implemented in NSObject as well <<OC209>>. 
+
+.Example implementation of the initialisation and usage of a object in Objective-C
+[source,ruby,linenums]
+----
+# Allocate memory and initialize the object myInstance as an instance from MyClass 
+# If no attributes are needed you can also write [MyClass new] 
+MyClass *myInstance = [[MyClass alloc] init];
+# Call the method setAttributes on the created object
+[myInstance setAttributes: 3: 'c'];
+----
+
+TIP: As for the fact that a Objective-C compiler is able to compile C and C{plus}{plus} code it is possible to combine C, C{plus}{plus} and Objective-C Code in one file and compile it.
 
 {empty} +
 
 === 4.2 Encapsualtion with Objective-C
 
+In Objective-C one can implement attributes in the following three states of protection:
+
+* *private* (Accessable only from within the class)
+* *protected* (Accessable only from within the class and its subclasses)
+* *public* (Accessable in the whole programm)
+
+Therefore Objective-C supports encapsulation. The way it is achieved however is more laborious than in similar programming languages like Java.
+
+Attributes which are declared in the interface are visible per default. To change the accessibility one has to define getter and setter methods. This can be done by declaring properties. Objective-C defines the getters and setters automatically when there is a @property tag in front of the attribute. This property tag can be supplied with attributes (e.g. readonly) as well. The following code snippet shows how the protected and public accesibilities can be achieved. To declare a private attribute it has to be implemented only in the @implementation section outside of the methods <<POC20>>.
+
+.Encpsulation private, protected and public in Objective-C
+[source,ruby,linenums]
+----
+@interface MyClass: NSObject
+
+# Protected is achieved with the nonatomic property attribute
+@property (nonatomic) int attribute;
+
+# Public is achieved by declaring public accessible getters and setters
+- (void) setAttribute;
+@end
+----
+
+WARNING: The problem with the nonatomic attribute of the @property tag is the fact, that it can not be guaranteed that it is accessible at this exact moment due to other threads accessing it <<POC20>>. 
+
+TIP: To call a method of the class inside of another method of the same class you can use the keyword self. This refers to the class and the compiler is able to asign the correct method. An example call whould be [self mySecondMethod] <<OC209>>. 
 
 {empty} +
 
 === 4.3 Inheritance with Objective-C
+
 
 
 {empty} +
@@ -177,7 +252,7 @@ To develop these applications apple provides his own integrated development envi
 
 As it is common in OOP languages Objective-C has a garbage collector. Its purpose is to delete unused objects like it is statet in chapter <<3.5 Persistence>>. Regardless of this fact it is proper style to delete instances of classes after they are not needed anymore. This has two main reasons.
 
-First of all the Objective-C garbage collector is not available on all apple plattforms like e.g. the IPhone. Additional Objective-C is a derivative of C. As it is common knowledge C and C++ are languages where it is essential to maintain the device storage by yourself. If it is not done properly it results in unnecessary high storage workload and can even lead to a crash of the OS. Therefore the maintenance of the programs instances should be taken care of very carefully in Objective-C. 
+First of all the Objective-C garbage collector is not available on all apple plattforms like e.g. the IPhone. Additional Objective-C is a derivative of C. As it is common knowledge C and C{plus}{plus} are languages where it is essential to maintain the device storage by yourself. If it is not done properly it results in unnecessary high storage workload and can even lead to a crash of the OS. Therefore the maintenance of the programs instances should be taken care of very carefully in Objective-C. 
 
 To release the memory used by an instance you just need to add a command like seen in the following code snippet after the instance is not needed anymore.
 
@@ -198,13 +273,13 @@ The release function like alloc and init does not need to be implemented by the 
 
 The programming language Go was introduced by Google in 2009. It has been develoed since by a team at google and a lot of other contributors from the open source community. The BSD style license it was released with allowed the community the further development to this day .
 
-Its initial cause was to create a language that is more accessible and save than C/C++ in terms of syntax, compile time and functionality. The focus was to develop an easier solution for scalable network services and cloud computing. 
+Its initial cause was to create a language that is more accessible and save than C/C{plus}{plus} in terms of syntax, compile time and functionality. The focus was to develop an easier solution for scalable network services and cloud computing. 
 Whilst Go differs in many ways from the C programming language, its roots with this language are preserved in the fact, that it still uses C like pointers. But they do not support pointer arithmetic which is because of the fact, that Go puts his focus on fast compiling <<GOL20>>.
 
-Go does a balancing act between velocity and accessibility. Its purpose is to deliver a solution which is faster than competing languages like python <<WSP20>> and more accessible than the really fast languages C and C++. 
+Go does a balancing act between velocity and accessibility. Its purpose is to deliver a solution which is faster than competing languages like python <<WSP20>> and more accessible than the really fast languages C and C{plus}{plus}. 
 Sadly Go does not fit well with GUI development or the development of embedded systems <<COP20>>.  
 
-In terms of OOP even Google is not sure whether or not Go is an OOP language. The total abscence of some features, which are discussed later in this chapter, could lead to the conclussion that Go simply is no OOP language. But at least it can be argued, that Go allows an OOP like style of programming <<IGO18>>. The degree to which Go differs from classic programming languages like C++ or Java will be discussed in the following chapters.
+In terms of OOP even Google is not sure whether or not Go is an OOP language. The total abscence of some features, which are discussed later in this chapter, could lead to the conclussion that Go simply is no OOP language. But at least it can be argued, that Go allows an OOP like style of programming <<IGO18>>. The degree to which Go differs from classic programming languages like C{plus}{plus} or Java will be discussed in the following chapters.
 
 {empty} +
 
@@ -267,7 +342,7 @@ TIP: If you declare a method with a parameter in front of the method name you ca
 
 The Go programming language does not implement inheritance in any way. This beeing said Go has is own way to map relationships between types. Therefore it uses composition instead of inheritance.
 
-Languages like Java and C++ require the programmer to know the relationships of his objects at first implementation. Additonaly multiple inheritance can get very complex very fast. Therefore the developers of Go made the choice to implement a lightweight alternative, which allows the implementation of relationships between types <<FAQ20>>.
+Languages like Java and C{plus}{plus} require the programmer to know the relationships of his objects at first implementation. Additonaly multiple inheritance can get very complex very fast. Therefore the developers of Go made the choice to implement a lightweight alternative, which allows the implementation of relationships between types <<FAQ20>>.
 
 .Inheritance alternative approach in Go
 [source,ruby,linenums]
@@ -358,6 +433,9 @@ As mentioned in chapter <<3.5 Persistence>> OOP lan147guages often use a garbage
 == References
 
 [horizontal]
+COC20:: [[COC20]] Website, developer.apple.com, called 2020-12-09, {empty} +
+https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Initialization/Initialization.html
+
 COP20:: [[COP20]] Johannes Weigend, Concepts of Programming Languages, called 2020-12-03, {empty} + 
 https://github.com/jweigend/concepts-of-programming-languages
 
