@@ -60,7 +60,9 @@ toc::[]
 
 [horizontal]
 Go:: Programming Language Go
+IDE:: Integrated development environment
 OOP:: Object Oriented Programming
+OS:: Operating System
 
 {empty} +
 {empty} +
@@ -117,7 +119,7 @@ As in chapter <<3.1 Classification>> mentioned, Objects in OOP are structured by
 
 With the use of inheritance it is possible to reuse the previous defined structures or to make use of an abstract object which can be specified in the child object. This helps the programmer to reduce the complexitiy and effort of the programm.
 
-Especially the use of an abstract class can be very useful. This is the case if a program uses different object that contain several equal attributes. In this case the abstract class defines the base attributes and the child objects inherit them and implement their functionality for them <<KOP09>>.
+Especially the use of an abstract class can be very useful. This is the case when a program makes use of different objects that contain several equal attributes. In this case the abstract class defines the base attributes and the child objects inherit them and implement their functionality for them <<KOP09>>.
 
 {empty} + 
 
@@ -142,6 +144,51 @@ Having this in mind, languages with a garbage collector are for no use in safety
 
 == 4. Object Oriented Programming in Objective-C
 
+The programming language Objecitve-C was developed to extend the functionalities of the popular C programming language with OOP. This took place in the early 80s after the rising popularity of the UNIX Operating System (OS), which was almost completely developed in C. The developer of Objective-C Brad J. Cox wanted to create a whole new programming language by using C and combining it with the Smalltalk-80 language. After the Apple company acquired the rights to Objective-C in 1996 it introduced possibilities for development on their Mac OS X. 
+
+In 2007 the Apple company introduced the first IPhone. In the same year Apple reworked the Objective-C programming language and released Objective-C 2.0. The popularity of this programming language come from the fact that applications for the IPhone are developed with Objective-C <<OC209>>.
+
+Today Objective-C is the primary programming language for OS X and iOS applications. Due to the combination of the C syntax, types and flow control statements with the possibility to define classes and methods, it suits optimal to develop these applications because of the fact that they use OOP mostly all of the time. 
+
+To develop these applications apple provides his own integrated development environment (IDE) with the name Xcode. It is also necessary to use a Mac computer to use this application, because it is only available in the Mac App Store <<POC20>>. As for the fact that Objective-C is a pure OOP language it provides all the features discussed in chapter <<3. Object Oriented Programming>>. The following chapters explain how they work and what may be speciall about them.
+
+=== 4.1 Classification with Objective-C
+
+
+
+{empty} +
+
+=== 4.2 Encapsualtion with Objective-C
+
+
+{empty} +
+
+=== 4.3 Inheritance with Objective-C
+
+
+{empty} +
+
+=== 4.4 Polymorphism with Objective-C
+
+
+{empty} +
+
+=== 4.5 Persistence with Objective-C
+
+As it is common in OOP languages Objective-C has a garbage collector. Its purpose is to delete unused objects like it is statet in chapter <<3.5 Persistence>>. Regardless of this fact it is proper style to delete instances of classes after they are not needed anymore. This has two main reasons.
+
+First of all the Objective-C garbage collector is not available on all apple plattforms like e.g. the IPhone. Additional Objective-C is a derivative of C. As it is common knowledge C and C++ are languages where it is essential to maintain the device storage by yourself. If it is not done properly it results in unnecessary high storage workload and can even lead to a crash of the OS. Therefore the maintenance of the programs instances should be taken care of very carefully in Objective-C. 
+
+To release the memory used by an instance you just need to add a command like seen in the following code snippet after the instance is not needed anymore.
+
+.Example release of an instance in Objective-C
+[source,ruby,linenums]
+----
+# This releases the instance and frees the memory
+[ myInstance release ]
+----
+
+The release function like alloc and init does not need to be implemented by the class. This function is also inherited of NSObject <<OC209>>.
 
 {empty} +
 {empty} +
@@ -163,7 +210,7 @@ In terms of OOP even Google is not sure whether or not Go is an OOP language. Th
 
 === 5.1 Classification with Go
 
-Go does not provide a classic syntax for creating a class. Go does not provide classes. To achive a classification Go uses structs similar to structs in the C programming language. The following code snipped shows how a class is implemented in Go.
+Go does not provide a classic syntax for creating a class. Go does not even provide classes in general. To achive a classification Go uses structs similar to structs in the C programming language. The following code snipped shows how a class is implemented in Go.
 
 .Example for a class in Go
 [source,ruby,linenums]
@@ -180,7 +227,7 @@ func (c ClassA) SayName() {
 }
 ----
 
-This states out that a struct is a user defined type that can hold a list of attributes. In combination with functions using the struct as base, as shown in the snippet, Go is able to offer similar functionality than other languages using classes <<COP20>>. 
+This states out that a struct is a user defined type that can hold a list of attributes. In combination with functions using the struct as base, as shown in the snippet, Go is able to offer similar functionality than other languages by using classes <<COP20>>. 
 
 {empty} +
 
@@ -286,7 +333,7 @@ In this example code there are two structs that implenent the same function getA
 
 === 5.5 Persistence with Go
 
-As mentioned in chapter <<3.5 Persistence>> OOP languages often use a garbage collector, which is responsible for deleting unused objects. Go also makes use of such a garbage collection. This results in the fact that the programmer does not need to care about deleting objects. On the other hand is Go no fit for programming a system with high safety requirements.
+As mentioned in chapter <<3.5 Persistence>> OOP lan147guages often use a garbage collector, which is responsible for deleting unused objects. Go also makes use of such a garbage collection. This results in the fact that the programmer does not need to care about deleting objects. On the other hand is Go no fit for programming a system with high safety requirements <<IGO18>>.
 
 {empty} +
 {empty} +
@@ -333,14 +380,14 @@ OOT15:: [[OOT15]] Suad Alagić, Object-Oriented Technology, 2015, Springer
 
 OOA15:: [[OOA15]] Brahma Dathan, Sarnath Ramnath, Object-Oriented Analysis, Design and Implementation - An Integrated Approach, Rev. 2, 2015, Springer
 
+POC20:: [[POC20]] Website, developer.apple.com, called 2020-12-09, {empty} +
+https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html
+
 POL20:: [[POL20]] Website, duden.de, called 2020-12-02, {empty} + 
 https://www.duden.de/rechtschreibung/Polymorphismus
 
 WSP20:: [[WSP20]] Lucas Lukac, getstream.io, called 2020-12-03, {empty} +
 https://getstream.io/blog/switched-python-go/
-
-//EOP14:: [[EOP14]] Richard Jones (Ed.), ECOOP 2014 – Object-Oriented Programming, 2014, Springer
-
 
 {empty} +
 {empty} +
@@ -351,4 +398,4 @@ https://getstream.io/blog/switched-python-go/
 
 [horizontal]
 
-<<img-go_example_call>> :: Method call syntax in Go
+<<img-logo_university>> :: Logo ot the TH Rosenheim
