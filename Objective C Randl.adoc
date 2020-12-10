@@ -35,7 +35,7 @@ WS 2020/21
 // Abstract
 == Abstract
 
-ToDo
+This thesis clarifies the question of what distinguishes object-oriented languages ​​and how *Object Oriented Programming* works in general. Afterwards two of the representatives of these programming languages *​​Objective-C* and *Go* are checked for the OOP criteria and compared with one another. Finally, a recommendation for action is made as to which of the languages ​​should be used and when.
 
 *Keywords:* Go, Objective-C, Object Oriented Programming
 
@@ -53,14 +53,12 @@ toc::[]
 {empty} +
 
 <<<
-
 // Acronyms
 
 == List of Abbreviations
 
 [horizontal]
 Go:: Programming Language Go
-IDE:: Integrated development environment
 OOP:: Object Oriented Programming
 OS:: Operating System
 
@@ -73,13 +71,17 @@ OS:: Operating System
 
 == 1. Introduction
 
+Object Oriented Programming (OOP) is a very popular and a wiedely used approach to develop all kinds of applications nowadays. To do so there are a lot of programming languages from which the developer can choose.
+
+The following chapters provide an overview of OOP in terms of its historical development and functionality. Afterward the two programming languages Objective-C and Go are compared based on their OOP capabilities.
+
 {empty} +
 {empty} +
 
 
 == 2. History of OOP
 
-The first approach for Object Oriented Programming (OOP) was more than 40 years ago with the programming language Simula 67. However the first language to be really successful with this new approach in programming was Smalltalk. These languages fullfilled the basics needed for OOP. With a slow and steady development OOP became a more and more used concept in new developed programming languages <<KOP09>>.
+The first approach for Object Oriented Programming was more than 40 years ago with the programming language Simula 67. However the first language to be really successful with this new approach in programming was Smalltalk. These languages fullfilled the basics needed for OOP. With a slow and steady development OOP became a more and more used concept in new developed programming languages <<KOP09>>.
 
 Since the teaching of programming languages like Java took place in a wide range of university classes, OOP became more and more relevant to companies. This lies in the fact that graduates from all over the world tend to know how to use at least one OOP language. The fact that more and more companies made use of OOP languages in their software solutions pushed their popularity even further.
 
@@ -150,7 +152,7 @@ In 2007 the Apple company introduced the first IPhone. In the same year Apple re
 
 Today Objective-C is the primary programming language for OS X and iOS applications. Due to the combination of the C syntax, types and flow control statements with the possibility to define classes and methods, it suits optimal to develop these applications because of the fact that they use OOP mostly all of the time. 
 
-To develop these applications apple provides his own integrated development environment (IDE) with the name Xcode. It is also necessary to use a Mac computer to use this application, because it is only available in the Mac App Store <<POC20>>. As for the fact that Objective-C is a pure OOP language it provides all the features discussed in chapter <<3. Object Oriented Programming>>. The following chapters explain how they work and what may be speciall about them.
+To develop these applications apple provides his own integrated development environment with the name Xcode. It is also necessary to use a Mac computer to use this application, because it is only available in the Mac App Store <<POC20>>. As for the fact that Objective-C is a pure OOP language it provides all the features discussed in chapter <<3. Object Oriented Programming>>. The following chapters explain how they work and what may be speciall about them.
 
 === 4.1 Classification with Objective-C
 
@@ -417,7 +419,7 @@ In this example code there are two structs that implenent the same function getA
 
 === 5.5 Persistence with Go
 
-As mentioned in chapter <<3.5 Persistence>> OOP lan147guages often use a garbage collector, which is responsible for deleting unused objects. Go also makes use of such a garbage collection. This results in the fact that the programmer does not need to care about deleting objects. On the other hand is Go no fit for programming a system with high safety requirements <<IGO18>>.
+As mentioned in chapter <<3.5 Persistence>> OOP languages often use a garbage collector, which is responsible for deleting unused objects. Go also makes use of such a garbage collection. This results in the fact that the programmer does not need to care about deleting objects. On the other hand is Go no fit for programming a system with high safety requirements <<IGO18>>.
 
 {empty} +
 {empty} +
@@ -425,16 +427,23 @@ As mentioned in chapter <<3.5 Persistence>> OOP lan147guages often use a garbage
 
 == 6. Differences between Go and Objective-C regarding OOP
 
+After evaluating the two programming languages Go and Objective-C regarding their OOP characteristics in the chapters <<4. Object Oriented Programming in Objective-C>> and <<5. Object Oriented Programming in Go>> we will now compare them and state out where it makes sense to use them.
+
+Objective-C does provide a straightforward approach on OOP while also delivering a simple syntax based on the C programming language. It comes with a lot of libraries to develop applications for Apples computers and smartphones. This support from Apple helps the developer in a big way. While Objective-C enables most of the OOP features in a easy way, it has two minor points to critisise. 
+
+While multilevel inheritance in Objective-C is intuitive by just adding the parent class to the interface declaration, it whould be nice if Objective-C had also a solution for multiple inheritance. The second point to critisise relates to the persistence solution in Objective-C. The garbage collection is provided in just some of the target OS, while on others there is no garbage collection. The question whether a garbage collector makes sense cannot be answered here, but if it is possible to use one it should be available on all targets. If only to avoid programming errors. 
+
+Nevertheless Objective-C is a intuitive programming language which delivers easy solutions for most of the OOP programming. Additionaly it has to be mentioned that Apple provides a good documentation for the language.
+
+The Go programming language is a prosperring language developed by Google and the Go community. It handles the difficulties of languages like C{plus}{plus} regarding memory management and compilation time. To do so it deliberately does not use a normal OOP approach. Since it is no OOP language one might say the comparison with an OOP language like Objective-C is easy, but it as stated in the chapter <<5. Object Oriented Programming in Go>> Go does provide a possibility to programm similar to OOP in all of the criteria considered. As conclusion it can be said that Go is no OOP language, but it can be used as one.
+
+As for the question which language is the better one regarding OOP there is no general answer. If the programmer wants to have the OOP functionalities in the language I whould recommend the usage of Objective-C. But as for the fact that Objective-C can only be used in the context of Apple products it does not pay off to learn this language if the programmer does not programm them often. Go on the other hand can be used in a wide area of use cases since it is not limited to one specific field. But Go also has its limitations. It does not fit well in programming of user interfaces. Objective-C has it main focus on this.
+
+That all being said the programmer has to decide which of the two languages he wants to use for his specific use case. But both of them provide him with solid solutions for OOP programming.
 
 {empty} +
 {empty} +
 
-
-== 6. Summary
-
-
-{empty} +
-{empty} +
 
 <<<
 // Appendix
