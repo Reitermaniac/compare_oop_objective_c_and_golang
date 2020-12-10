@@ -439,6 +439,77 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+pre.pygments .hll { background-color: #ffffcc }
+pre.pygments  { background: #f0f3f3; }
+pre.pygments .tok-c { color: #0099FF; font-style: italic } /* Comment */
+pre.pygments .tok-err { color: #AA0000; background-color: #FFAAAA } /* Error */
+pre.pygments .tok-k { color: #006699; font-weight: bold } /* Keyword */
+pre.pygments .tok-o { color: #555555 } /* Operator */
+pre.pygments .tok-ch { color: #0099FF; font-style: italic } /* Comment.Hashbang */
+pre.pygments .tok-cm { color: #0099FF; font-style: italic } /* Comment.Multiline */
+pre.pygments .tok-cp { color: #009999 } /* Comment.Preproc */
+pre.pygments .tok-cpf { color: #0099FF; font-style: italic } /* Comment.PreprocFile */
+pre.pygments .tok-c1 { color: #0099FF; font-style: italic } /* Comment.Single */
+pre.pygments .tok-cs { color: #0099FF; font-weight: bold; font-style: italic } /* Comment.Special */
+pre.pygments .tok-gd { background-color: #FFCCCC; border: 1px solid #CC0000 } /* Generic.Deleted */
+pre.pygments .tok-ge { font-style: italic } /* Generic.Emph */
+pre.pygments .tok-gr { color: #FF0000 } /* Generic.Error */
+pre.pygments .tok-gh { color: #003300; font-weight: bold } /* Generic.Heading */
+pre.pygments .tok-gi { background-color: #CCFFCC; border: 1px solid #00CC00 } /* Generic.Inserted */
+pre.pygments .tok-go { color: #AAAAAA } /* Generic.Output */
+pre.pygments .tok-gp { color: #000099; font-weight: bold } /* Generic.Prompt */
+pre.pygments .tok-gs { font-weight: bold } /* Generic.Strong */
+pre.pygments .tok-gu { color: #003300; font-weight: bold } /* Generic.Subheading */
+pre.pygments .tok-gt { color: #99CC66 } /* Generic.Traceback */
+pre.pygments .tok-kc { color: #006699; font-weight: bold } /* Keyword.Constant */
+pre.pygments .tok-kd { color: #006699; font-weight: bold } /* Keyword.Declaration */
+pre.pygments .tok-kn { color: #006699; font-weight: bold } /* Keyword.Namespace */
+pre.pygments .tok-kp { color: #006699 } /* Keyword.Pseudo */
+pre.pygments .tok-kr { color: #006699; font-weight: bold } /* Keyword.Reserved */
+pre.pygments .tok-kt { color: #007788; font-weight: bold } /* Keyword.Type */
+pre.pygments .tok-m { color: #FF6600 } /* Literal.Number */
+pre.pygments .tok-s { color: #CC3300 } /* Literal.String */
+pre.pygments .tok-na { color: #330099 } /* Name.Attribute */
+pre.pygments .tok-nb { color: #336666 } /* Name.Builtin */
+pre.pygments .tok-nc { color: #00AA88; font-weight: bold } /* Name.Class */
+pre.pygments .tok-no { color: #336600 } /* Name.Constant */
+pre.pygments .tok-nd { color: #9999FF } /* Name.Decorator */
+pre.pygments .tok-ni { color: #999999; font-weight: bold } /* Name.Entity */
+pre.pygments .tok-ne { color: #CC0000; font-weight: bold } /* Name.Exception */
+pre.pygments .tok-nf { color: #CC00FF } /* Name.Function */
+pre.pygments .tok-nl { color: #9999FF } /* Name.Label */
+pre.pygments .tok-nn { color: #00CCFF; font-weight: bold } /* Name.Namespace */
+pre.pygments .tok-nt { color: #330099; font-weight: bold } /* Name.Tag */
+pre.pygments .tok-nv { color: #003333 } /* Name.Variable */
+pre.pygments .tok-ow { color: #000000; font-weight: bold } /* Operator.Word */
+pre.pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
+pre.pygments .tok-mb { color: #FF6600 } /* Literal.Number.Bin */
+pre.pygments .tok-mf { color: #FF6600 } /* Literal.Number.Float */
+pre.pygments .tok-mh { color: #FF6600 } /* Literal.Number.Hex */
+pre.pygments .tok-mi { color: #FF6600 } /* Literal.Number.Integer */
+pre.pygments .tok-mo { color: #FF6600 } /* Literal.Number.Oct */
+pre.pygments .tok-sa { color: #CC3300 } /* Literal.String.Affix */
+pre.pygments .tok-sb { color: #CC3300 } /* Literal.String.Backtick */
+pre.pygments .tok-sc { color: #CC3300 } /* Literal.String.Char */
+pre.pygments .tok-dl { color: #CC3300 } /* Literal.String.Delimiter */
+pre.pygments .tok-sd { color: #CC3300; font-style: italic } /* Literal.String.Doc */
+pre.pygments .tok-s2 { color: #CC3300 } /* Literal.String.Double */
+pre.pygments .tok-se { color: #CC3300; font-weight: bold } /* Literal.String.Escape */
+pre.pygments .tok-sh { color: #CC3300 } /* Literal.String.Heredoc */
+pre.pygments .tok-si { color: #AA0000 } /* Literal.String.Interpol */
+pre.pygments .tok-sx { color: #CC3300 } /* Literal.String.Other */
+pre.pygments .tok-sr { color: #33AAAA } /* Literal.String.Regex */
+pre.pygments .tok-s1 { color: #CC3300 } /* Literal.String.Single */
+pre.pygments .tok-ss { color: #FFCC33 } /* Literal.String.Symbol */
+pre.pygments .tok-bp { color: #336666 } /* Name.Builtin.Pseudo */
+pre.pygments .tok-fm { color: #CC00FF } /* Name.Function.Magic */
+pre.pygments .tok-vc { color: #003333 } /* Name.Variable.Class */
+pre.pygments .tok-vg { color: #003333 } /* Name.Variable.Global */
+pre.pygments .tok-vi { color: #003333 } /* Name.Variable.Instance */
+pre.pygments .tok-vm { color: #003333 } /* Name.Variable.Magic */
+pre.pygments .tok-il { color: #FF6600 } /* Literal.Number.Integer.Long */
+</style>
 </head>
 <body class="article">
 <div id="header">
@@ -447,7 +518,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="author" class="author">Thomas Martin Randl</span><br>
 <span id="email" class="email"><a href="mailto:thomas.m.randl@stud.th-rosenheim.de">thomas.m.randl@stud.th-rosenheim.de</a></span><br>
 <span id="revnumber">version 1.00.00,</span>
-<span id="revdate">2020-01-10</span>
+<span id="revdate">2020-12-10</span>
 </div>
 </div>
 <div id="content">
@@ -477,7 +548,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_abstract">Abstract</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ToDo</p>
+<p>This thesis clarifies the question of what distinguishes object-oriented languages ​​and how <strong>Object Oriented Programming</strong> works in general. Afterwards two of the representatives of these programming languages <strong>​​Objective-C</strong> and <strong>Go</strong> are checked for the OOP criteria and compared with one another. Finally, a recommendation for action is made as to which of the languages ​​should be used and when.</p>
 </div>
 <div class="paragraph">
 <p><strong>Keywords:</strong> Go, Objective-C, Object Oriented Programming</p>
@@ -494,12 +565,35 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_list_of_abbreviations">List of Abbreviations</a></li>
 <li><a href="#_1_introduction">1. Introduction</a></li>
 <li><a href="#_2_history_of_oop">2. History of OOP</a></li>
-<li><a href="#_3_object_oriented_programming">3. Object Oriented Programming</a></li>
-<li><a href="#_4_object_oriented_programming_in_objective_c">4. Object Oriented Programming in Objective-C</a></li>
-<li><a href="#_5_object_oriented_programming_in_go">5. Object Oriented Programming in Go</a></li>
-<li><a href="#_6_summary">6. Summary</a></li>
+<li><a href="#_3_object_oriented_programming">3. Object Oriented Programming</a>
+<ul class="sectlevel2">
+<li><a href="#_3_1_classification">3.1 Classification</a></li>
+<li><a href="#_3_2_encapsulation">3.2 Encapsulation</a></li>
+<li><a href="#_3_3_inheritance">3.3 Inheritance</a></li>
+<li><a href="#_3_4_polymorphism">3.4 Polymorphism</a></li>
+<li><a href="#_3_5_persistence">3.5 Persistence</a></li>
+</ul>
+</li>
+<li><a href="#_4_object_oriented_programming_in_objective_c">4. Object Oriented Programming in Objective-C</a>
+<ul class="sectlevel2">
+<li><a href="#_4_1_classification_with_objective_c">4.1 Classification with Objective-C</a></li>
+<li><a href="#_4_2_encapsualtion_with_objective_c">4.2 Encapsualtion with Objective-C</a></li>
+<li><a href="#_4_3_inheritance_with_objective_c">4.3 Inheritance with Objective-C</a></li>
+<li><a href="#_4_4_polymorphism_with_objective_c">4.4 Polymorphism with Objective-C</a></li>
+<li><a href="#_4_5_persistence_with_objective_c">4.5 Persistence with Objective-C</a></li>
+</ul>
+</li>
+<li><a href="#_5_object_oriented_programming_in_go">5. Object Oriented Programming in Go</a>
+<ul class="sectlevel2">
+<li><a href="#_5_1_classification_with_go">5.1 Classification with Go</a></li>
+<li><a href="#_5_2_encapsulation_with_go">5.2 Encapsulation with Go</a></li>
+<li><a href="#_5_3_inheritance_with_go">5.3 Inheritance with Go</a></li>
+<li><a href="#_5_4_polymorphism_with_go">5.4 Polymorphism with Go</a></li>
+<li><a href="#_5_5_persistence_with_go">5.5 Persistence with Go</a></li>
+</ul>
+</li>
+<li><a href="#_6_differences_between_go_and_objective_c_regarding_oop">6. Differences between Go and Objective-C regarding OOP</a></li>
 <li><a href="#_references">References</a></li>
-<li><a href="#_list_of_figures">List of Figures</a></li>
 </ul>
 </div>
 <div class="paragraph">
@@ -530,6 +624,14 @@ OOP
 <p>Object Oriented Programming</p>
 </td>
 </tr>
+<tr>
+<td class="hdlist1">
+OS
+</td>
+<td class="hdlist2">
+<p>Operating System</p>
+</td>
+</tr>
 </table>
 </div>
 <div class="paragraph">
@@ -543,6 +645,12 @@ OOP
 <h2 id="_1_introduction">1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
+<p>Object Oriented Programming (OOP) is a very popular and a wiedely used approach to develop all kinds of applications nowadays. To do so there are a lot of programming languages from which the developer can choose.</p>
+</div>
+<div class="paragraph">
+<p>The following chapters provide an overview of OOP in terms of its historical development and functionality. Afterward the two programming languages Objective-C and Go are compared based on their OOP capabilities.</p>
+</div>
+<div class="paragraph">
 <p><br>
 <br></p>
 </div>
@@ -551,6 +659,15 @@ OOP
 <div class="sect1">
 <h2 id="_2_history_of_oop">2. History of OOP</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The first approach for Object Oriented Programming was more than 40 years ago with the programming language Simula 67. However the first language to be really successful with this new approach in programming was Smalltalk. These languages fullfilled the basics needed for OOP. With a slow and steady development OOP became a more and more used concept in new developed programming languages <a href="#KOP09">[KOP09]</a>.</p>
+</div>
+<div class="paragraph">
+<p>Since the teaching of programming languages like Java took place in a wide range of university classes, OOP became more and more relevant to companies. This lies in the fact that graduates from all over the world tend to know how to use at least one OOP language. The fact that more and more companies made use of OOP languages in their software solutions pushed their popularity even further.</p>
+</div>
+<div class="paragraph">
+<p>Nowadays OOP is the most spread concept between all programming languages. Besides their teaching all over the globe their popularity can be derived from the fact that problems from the real world can easily be transfered into the programming world. It is simple to imagine a button in a graphical interface to be an object with certain properties. Even non OOP languages nowadays tend to use object similar approaches as you can see with the programming language Go in Chapter <a href="#_5_object_oriented_programming_in_go">5. Object Oriented Programming in Go</a> <a href="#KOP09">[KOP09]</a>. Sometimes this works out well, but the OOP approach turns out to be the better way in most of this cases.</p>
+</div>
 <div class="paragraph">
 <p><br>
 <br></p>
@@ -561,8 +678,77 @@ OOP
 <h2 id="_3_object_oriented_programming">3. Object Oriented Programming</h2>
 <div class="sectionbody">
 <div class="paragraph">
+<p>As we learned in chapter <a href="#_2_history_of_oop">2. History of OOP</a>, OOP is a widely spread concept in modern programming languages. It takes proceedings from the real world into a programming context. This is because of the fact that you can declare every instance from the real world as an object. These objects on the other hand can be put in context and interact with each other. These traits of OOP are called classification and inheritance. With that in mind every object needs his own class with its own methods to interact with each other <a href="#KOP09">[KOP09]</a>. In the following chapter we will learn how a class in OOP is structured and what base concepts OOP uses to set classes in context with each other and how they are visibile outside of the object. The extend to which a programming language uses these concepts defines how much of an OOP language it is.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="sect2">
+<h3 id="_3_1_classification">3.1 Classification</h3>
+<div class="paragraph">
+<p>Classification is a technique used to classify objects due to their skills. During the process objects are structured (chapter <a href="#_3_3_inheritance">3.3 Inheritance</a>) and the skills are assigned to the objects class.</p>
+</div>
+<div class="paragraph">
+<p>A class describes and implements a new type of object. Objects in OOP are derived from that class. Every class consists of several attributes and methods. An object kann be created using the class as kind of a datatype with parameters. The added parameters are assigned to the attributes in the constructor of the class. The created object interacts independently from other objects with the environment using the methods provided by the base class.</p>
+</div>
+<div class="paragraph">
+<p>The methods of a class are declared in an interface. This can be used by other classes to interact with the classes objects using these methods <a href="#KOP09">[KOP09]</a>.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_2_encapsulation">3.2 Encapsulation</h3>
+<div class="paragraph">
+<p>Encapsulation is used for hiding the objects information from the environent. It is uesd to protect the attributes values of the object from manipulation. This is done by declaring the attributes visibility. If an attribute is declared as not visible from outside the object it can only be accessed by using methods declared in the inteface of the objects class. Methods can also be declared in different visibility states depending on the programming language.</p>
+</div>
+<div class="paragraph">
+<p>An encapsulated object can only be interacted with via the methods declared in the interface. Every attribute or method not mentioned in the interface is neither accessible nor visible from outside <a href="#KOP09">[KOP09]</a>.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_3_inheritance">3.3 Inheritance</h3>
+<div class="paragraph">
+<p>As in chapter <a href="#_3_1_classification">3.1 Classification</a> mentioned, Objects in OOP are structured by their skills and abilities. In OOP every Object is derived from a parent object. The resulting child object is able to use the functionality of the parent and its own.  This property is called inheritance.</p>
+</div>
+<div class="paragraph">
+<p>With the use of inheritance it is possible to reuse the previous defined structures or to make use of an abstract object which can be specified in the child object. This helps the programmer to reduce the complexitiy and effort of the programm.</p>
+</div>
+<div class="paragraph">
+<p>Especially the use of an abstract class can be very useful. This is the case when a program makes use of different objects that contain several equal attributes. In this case the abstract class defines the base attributes and the child objects inherit them and implement their functionality for them <a href="#KOP09">[KOP09]</a>.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_4_polymorphism">3.4 Polymorphism</h3>
+<div class="paragraph">
+<p>A synonym for polimorphism is diversity. Taking this into the context of programming languages, polymorphism is the approach to accept and return values of more than one datatype.</p>
+</div>
+<div class="paragraph">
+<p>OOP uses this functionality with its inheritance (chapter <a href="#_3_3_inheritance">3.3 Inheritance</a>). This allows the use of different objects as parameters and/or return values.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_5_persistence">3.5 Persistence</h3>
+<div class="paragraph">
+<p>Persistence stands for the lifetime an object exists in the program after it is created. There are some different approaches depending on the used programming language. While in C&#43;&#43; the user is responsible for deleting the created objects after their use expired, languages like Java use a so called "garbage collector".</p>
+</div>
+<div class="paragraph">
+<p>Having this in mind, languages with a garbage collector are for no use in safety related software, because a fast reaction to a problem can not be guaranteeed if the garbage collector interrupts the programm at the exact moment of a emergency. An automatic memory management on the other hand is much less bug prone due to the lower complexity <a href="#KOP09">[KOP09]</a>.</p>
+</div>
+<div class="paragraph">
 <p><br>
 <br></p>
+</div>
 </div>
 </div>
 </div>
@@ -570,8 +756,214 @@ OOP
 <h2 id="_4_object_oriented_programming_in_objective_c">4. Object Oriented Programming in Objective-C</h2>
 <div class="sectionbody">
 <div class="paragraph">
+<p>The programming language Objecitve-C was developed to extend the functionalities of the popular C programming language with OOP. This took place in the early 80s after the rising popularity of the UNIX Operating System (OS), which was almost completely developed in C. The developer of Objective-C Brad J. Cox wanted to create a whole new programming language by using C and combining it with the Smalltalk-80 language. After the Apple company acquired the rights to Objective-C in 1996 it introduced possibilities for development on their Mac OS X.</p>
+</div>
+<div class="paragraph">
+<p>In 2007 the Apple company introduced the first IPhone. In the same year Apple reworked the Objective-C programming language and released Objective-C 2.0. The popularity of this programming language come from the fact that applications for the IPhone are developed with Objective-C <a href="#OC209">[OC209]</a>.</p>
+</div>
+<div class="paragraph">
+<p>Today Objective-C is the primary programming language for OS X and iOS applications. Due to the combination of the C syntax, types and flow control statements with the possibility to define classes and methods, it suits optimal to develop these applications because of the fact that they use OOP mostly all of the time.</p>
+</div>
+<div class="paragraph">
+<p>To develop these applications apple provides his own integrated development environment with the name Xcode. It is also necessary to use a Mac computer to use this application, because it is only available in the Mac App Store <a href="#POC20">[POC20]</a>. As for the fact that Objective-C is a pure OOP language it provides all the features discussed in chapter <a href="#_3_object_oriented_programming">3. Object Oriented Programming</a>. The following chapters explain how they work and what may be speciall about them.</p>
+</div>
+<div class="sect2">
+<h3 id="_4_1_classification_with_objective_c">4.1 Classification with Objective-C</h3>
+<div class="paragraph">
+<p>The usage of classes in Objective-C is a very common task. This is because of the fact, that it is used to develop applications and every part of an application either is an object or communicates with one. Apple provides a large library of predefined classes with the names Cocoa (Mac OS X) and Cocoa Touch (IOs). These classes can either be used directly or personalised for the applications purpose.</p>
+</div>
+<div class="paragraph">
+<p>Since everything in Objective-C can be achieved with classes they are structured very similar to Java or C&#43;&#43; classes. As can be read in chapter <a href="#_4_3_inheritance_with_objective_c">4.3 Inheritance with Objective-C</a> all classes are inheritad from the root class NSObject. Every Objective-C class has an @interface and @implementation section. While the @interface usually is located in the header file .h the @implementation is implemented in the source file with the file ending .m.</p>
+</div>
+<div class="paragraph">
+<p>The @interface section of the class defines its name, parent class (e.g. NSObject), attributes and methods. It is used to define the contents of the class and for other class instances to see what methods can be called on the objects of the class. The following example shows how this can be implemented.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example implementation of an interface in Objective-C</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="ruby"><span></span><span class="lineno"> 1 </span><span class="tok-c1"># The head of interface MyClass with parent Class NSObject</span>
+<span class="lineno"> 2 </span><span class="tok-vi">@interface</span> <span class="tok-ss">MyClass</span><span class="tok-p">:</span> <span class="tok-no">NSObject</span>
+<span class="lineno"> 3 </span><span class="tok-p">{</span>
+<span class="lineno"> 4 </span>	<span class="tok-c1"># The attributes of MyClass</span>
+<span class="lineno"> 5 </span>	<span class="tok-n">int</span> <span class="tok-n">attribute1</span><span class="tok-p">;</span>
+<span class="lineno"> 6 </span>	<span class="tok-n">char</span> <span class="tok-n">attribute2</span><span class="tok-p">;</span>
+<span class="lineno"> 7 </span><span class="tok-p">}</span>
+<span class="lineno"> 8 </span><span class="tok-c1"># Methods of MyClass</span>
+<span class="lineno"> 9 </span><span class="tok-o">-</span> <span class="tok-p">(</span><span class="tok-n">void</span><span class="tok-p">)</span> <span class="tok-ss">setAttributes</span><span class="tok-p">:</span> <span class="tok-p">(</span><span class="tok-n">int</span><span class="tok-p">)</span> <span class="tok-ss">i</span><span class="tok-p">:</span> <span class="tok-p">(</span><span class="tok-n">char</span><span class="tok-p">)</span> <span class="tok-n">c</span><span class="tok-p">;</span>
+<span class="lineno">10 </span><span class="tok-vi">@end</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The implementation of the defined methods can be done as follows.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example implementation of the defined methods in Objective-C</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="ruby"><span></span><span class="lineno">1 </span><span class="tok-vi">@implementation</span> <span class="tok-no">MyClass</span>
+<span class="lineno">2 </span><span class="tok-c1"># Implementation of the setAttributes Method defined in @interface</span>
+<span class="lineno">3 </span><span class="tok-o">-</span> <span class="tok-p">(</span><span class="tok-n">void</span><span class="tok-p">)</span> <span class="tok-ss">setAttributes</span><span class="tok-p">:</span> <span class="tok-p">(</span><span class="tok-n">int</span><span class="tok-p">)</span> <span class="tok-ss">i</span><span class="tok-p">:</span> <span class="tok-p">(</span><span class="tok-n">char</span><span class="tok-p">)</span> <span class="tok-n">c</span>
+<span class="lineno">4 </span><span class="tok-p">{</span>
+<span class="lineno">5 </span>	<span class="tok-n">attribute1</span> <span class="tok-o">=</span> <span class="tok-n">i</span><span class="tok-p">;</span>
+<span class="lineno">6 </span>	<span class="tok-n">attribute2</span> <span class="tok-o">=</span> <span class="tok-n">c</span><span class="tok-p">;</span>
+<span class="lineno">7 </span><span class="tok-p">}</span>
+<span class="lineno">8 </span><span class="tok-vi">@end</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To create a instance of a class in Objective-C you have to allocate memory and initialize it first. Afterwards you can interact with the object. If your class does not provide an own init function the init function calls the NSObjects init function as default. The alloc function is implemented in NSObject as well <a href="#OC209">[OC209]</a>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example implementation of the initialisation and usage of a object in Objective-C</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="ruby"><span></span><span class="lineno">1 </span><span class="tok-c1"># Allocate memory and initialize the object myInstance as an instance from MyClass</span>
+<span class="lineno">2 </span><span class="tok-c1"># If no attributes are needed you can also write [MyClass new]</span>
+<span class="lineno">3 </span><span class="tok-no">MyClass</span> <span class="tok-o">*</span><span class="tok-n">myInstance</span> <span class="tok-o">=</span> <span class="tok-o">[[</span><span class="tok-no">MyClass</span> <span class="tok-n">alloc</span><span class="tok-o">]</span> <span class="tok-n">init</span><span class="tok-o">]</span><span class="tok-p">;</span>
+<span class="lineno">4 </span><span class="tok-c1"># Call the method setAttributes on the created object</span>
+<span class="lineno">5 </span><span class="tok-o">[</span><span class="tok-n">myInstance</span> <span class="tok-ss">setAttributes</span><span class="tok-p">:</span> <span class="tok-mi">3</span><span class="tok-p">:</span> <span class="tok-s1">&#39;c&#39;</span><span class="tok-o">]</span><span class="tok-p">;</span></code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+As for the fact that a Objective-C compiler is able to compile C and C&#43;&#43; code it is possible to combine C, C&#43;&#43; and Objective-C Code in one file and compile it.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_2_encapsualtion_with_objective_c">4.2 Encapsualtion with Objective-C</h3>
+<div class="paragraph">
+<p>In Objective-C one can implement attributes in the following three states of protection:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>private</strong> (Accessable only from within the class)</p>
+</li>
+<li>
+<p><strong>protected</strong> (Accessable only from within the class and its subclasses)</p>
+</li>
+<li>
+<p><strong>public</strong> (Accessable in the whole programm)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Therefore Objective-C supports encapsulation. The way it is achieved however is more laborious than in similar programming languages like Java.</p>
+</div>
+<div class="paragraph">
+<p>Attributes which are declared in the interface are visible per default. To change the accessibility one has to define getter and setter methods. This can be done by declaring properties. Objective-C defines the getters and setters automatically when there is a @property tag in front of the attribute. This property tag can be supplied with attributes (e.g. readonly) as well. The following code snippet shows how the protected and public accesibilities can be achieved. To declare a private attribute it has to be implemented only in the @implementation section outside of the methods <a href="#POC20">[POC20]</a>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Encpsulation private, protected and public in Objective-C</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="ruby"><span></span><span class="lineno">1 </span><span class="tok-vi">@interface</span> <span class="tok-ss">MyClass</span><span class="tok-p">:</span> <span class="tok-no">NSObject</span>
+<span class="lineno">2 </span>
+<span class="lineno">3 </span><span class="tok-c1"># Protected is achieved with the nonatomic property attribute</span>
+<span class="lineno">4 </span><span class="tok-vi">@property</span> <span class="tok-p">(</span><span class="tok-n">nonatomic</span><span class="tok-p">)</span> <span class="tok-n">int</span> <span class="tok-n">attribute</span><span class="tok-p">;</span>
+<span class="lineno">5 </span>
+<span class="lineno">6 </span><span class="tok-c1"># Public is achieved by declaring public accessible getters and setters</span>
+<span class="lineno">7 </span><span class="tok-o">-</span> <span class="tok-p">(</span><span class="tok-n">void</span><span class="tok-p">)</span> <span class="tok-n">setAttribute</span><span class="tok-p">;</span>
+<span class="lineno">8 </span><span class="tok-vi">@end</span></code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+The problem with the nonatomic attribute of the @property tag is the fact, that it can not be guaranteed that it is accessible at this exact moment due to other threads accessing it <a href="#POC20">[POC20]</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+To call a method of the class inside of another method of the same class you can use the keyword self. This refers to the class and the compiler is able to asign the correct method. An example call whould be [self mySecondMethod] <a href="#OC209">[OC209]</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_3_inheritance_with_objective_c">4.3 Inheritance with Objective-C</h3>
+<div class="paragraph">
+<p>Objective-C supports multilevel inheritance. Therefore a class can inherit all methods and attributes of a parent class. On top of all classes in Objective-C is the NSObject class as root object. All classes below inherit its methods. It is also possible to overwrite functions from a parent class. This has the effect, that the new implementation for this function will be executed when called on an object from this class. The instance attributes defined in the parent class can also be accessed in the child class <a href="#OC209">[OC209]</a>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example inheritance in Objective-C</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="ruby"><span></span><span class="lineno">1 </span><span class="tok-vi">@interface</span> <span class="tok-ss">MyClass</span><span class="tok-p">:</span> <span class="tok-no">MyParentClass</span></code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Objective-C does not provide a mechanism for multiple inheritance. Therefore a class can only inherit one parentclass.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_4_polymorphism_with_objective_c">4.4 Polymorphism with Objective-C</h3>
+<div class="paragraph">
+<p>Objective-C supports polymorphism. The compiler is able to determine which method is called from which instance. This is due to the fact that classes encapsulate their attributes and methods and the compiler therefore knows the related object for the method even if the method name is used by other classes as well <a href="#OC209">[OC209]</a>.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_5_persistence_with_objective_c">4.5 Persistence with Objective-C</h3>
+<div class="paragraph">
+<p>As it is common in OOP languages Objective-C has a garbage collector. Its purpose is to delete unused objects like it is statet in chapter <a href="#_3_5_persistence">3.5 Persistence</a>. Regardless of this fact it is proper style to delete instances of classes after they are not needed anymore. This has two main reasons.</p>
+</div>
+<div class="paragraph">
+<p>First of all the Objective-C garbage collector is not available on all apple plattforms like e.g. the IPhone. Additional Objective-C is a derivative of C. As it is common knowledge C and C&#43;&#43; are languages where it is essential to maintain the device storage by yourself. If it is not done properly it results in unnecessary high storage workload and can even lead to a crash of the OS. Therefore the maintenance of the programs instances should be taken care of very carefully in Objective-C.</p>
+</div>
+<div class="paragraph">
+<p>To release the memory used by an instance you just need to add a command like seen in the following code snippet after the instance is not needed anymore.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example release of an instance in Objective-C</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="ruby"><span></span><span class="lineno">1 </span><span class="tok-c1"># This releases the instance and frees the memory</span>
+<span class="lineno">2 </span><span class="tok-o">[</span> <span class="tok-n">myInstance</span> <span class="tok-n">release</span> <span class="tok-o">]</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The release function like alloc and init does not need to be implemented by the class. This function is also inherited of NSObject <a href="#OC209">[OC209]</a>.</p>
+</div>
+<div class="paragraph">
 <p><br>
 <br></p>
+</div>
 </div>
 </div>
 </div>
@@ -579,18 +971,214 @@ OOP
 <h2 id="_5_object_oriented_programming_in_go">5. Object Oriented Programming in Go</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><br>
-<br></p>
+<p>The programming language Go was introduced by Google in 2009. It has been develoed since by a team at google and a lot of other contributors from the open source community. The BSD style license it was released with allowed the community the further development to this day .</p>
+</div>
+<div class="paragraph">
+<p>Its initial cause was to create a language that is more accessible and save than C/C&#43;&#43; in terms of syntax, compile time and functionality. The focus was to develop an easier solution for scalable network services and cloud computing.
+Whilst Go differs in many ways from the C programming language, its roots with this language are preserved in the fact, that it still uses C like pointers. But they do not support pointer arithmetic which is because of the fact, that Go puts his focus on fast compiling <a href="#GOL20">[GOL20]</a>.</p>
+</div>
+<div class="paragraph">
+<p>Go does a balancing act between velocity and accessibility. Its purpose is to deliver a solution which is faster than competing languages like python <a href="#WSP20">[WSP20]</a> and more accessible than the really fast languages C and C&#43;&#43;.
+Sadly Go does not fit well with GUI development or the development of embedded systems <a href="#COP20">[COP20]</a>.</p>
+</div>
+<div class="paragraph">
+<p>In terms of OOP even Google is not sure whether or not Go is an OOP language. The total abscence of some features, which are discussed later in this chapter, could lead to the conclussion that Go simply is no OOP language. But at least it can be argued, that Go allows an OOP like style of programming <a href="#IGO18">[IGO18]</a>. The degree to which Go differs from classic programming languages like C&#43;&#43; or Java will be discussed in the following chapters.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div class="sect2">
+<h3 id="_5_1_classification_with_go">5.1 Classification with Go</h3>
+<div class="paragraph">
+<p>Go does not provide a classic syntax for creating a class. Go does not even provide classes in general. To achive a classification Go uses structs similar to structs in the C programming language. The following code snipped shows how a class is implemented in Go.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example for a class in Go</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="ruby"><span></span><span class="lineno"> 1 </span><span class="tok-c1"># This is the type containing the attributes of the class ClassA</span>
+<span class="lineno"> 2 </span><span class="tok-n">type</span> <span class="tok-no">ClassA</span> <span class="tok-n">struct</span> <span class="tok-p">{</span>
+<span class="lineno"> 3 </span>	<span class="tok-n">color</span> <span class="tok-n">color</span><span class="tok-o">.</span><span class="tok-n">Color</span>
+<span class="lineno"> 4 </span>	<span class="tok-nb">name</span>  <span class="tok-n">string</span>
+<span class="lineno"> 5 </span><span class="tok-p">}</span>
+<span class="lineno"> 6 </span>
+<span class="lineno"> 7 </span><span class="tok-c1"># This is a method of class ClassA</span>
+<span class="lineno"> 8 </span><span class="tok-n">func</span> <span class="tok-p">(</span><span class="tok-n">c</span> <span class="tok-no">ClassA</span><span class="tok-p">)</span> <span class="tok-no">SayName</span><span class="tok-p">()</span> <span class="tok-p">{</span>
+<span class="lineno"> 9 </span>	<span class="tok-n">fmt</span><span class="tok-o">.</span><span class="tok-n">Println</span><span class="tok-p">(</span><span class="tok-nb">name</span><span class="tok-p">);</span>
+<span class="lineno">10 </span><span class="tok-p">}</span></code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>This states out that a struct is a user defined type that can hold a list of attributes. In combination with functions using the struct as base, as shown in the snippet, Go is able to offer similar functionality than other languages by using classes <a href="#COP20">[COP20]</a>.</p>
 </div>
-<div class="sect1">
-<h2 id="_6_summary">6. Summary</h2>
-<div class="sectionbody">
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_2_encapsulation_with_go">5.2 Encapsulation with Go</h3>
+<div class="paragraph">
+<p>Classic OOP languages use keywords like "protected", "private" and "public" to encapsulate attributes and methods of their classes. Go does offer a different approach.</p>
+</div>
+<div class="paragraph">
+<p>Go encapsulates on package level by differentiating between lower or upper case on the first letter of the method, type or interface name.</p>
+</div>
+<div class="listingblock">
+<div class="title">Encapsulating possibilities in Go</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="ruby"><span></span><span class="lineno"> 1 </span><span class="tok-c1"># This is a public struct due to the capital letter</span>
+<span class="lineno"> 2 </span><span class="tok-n">type</span> <span class="tok-no">ClassA</span> <span class="tok-n">struct</span> <span class="tok-p">{}</span>
+<span class="lineno"> 3 </span>
+<span class="lineno"> 4 </span><span class="tok-c1">#This is a private struct due to the lower case letter</span>
+<span class="lineno"> 5 </span><span class="tok-n">type</span> <span class="tok-n">classB</span> <span class="tok-n">struct</span> <span class="tok-p">{</span> <span class="tok-n">x</span><span class="tok-p">,</span> <span class="tok-n">y</span> <span class="tok-n">float64</span> <span class="tok-p">}</span>
+<span class="lineno"> 6 </span>
+<span class="lineno"> 7 </span><span class="tok-c1">#This is a private method due ot the lower case letter</span>
+<span class="lineno"> 8 </span><span class="tok-n">func</span> <span class="tok-p">(</span><span class="tok-n">c</span> <span class="tok-o">*</span><span class="tok-no">ClassA</span><span class="tok-p">)</span> <span class="tok-n">string</span><span class="tok-p">()</span> <span class="tok-n">string</span> <span class="tok-p">{</span>
+<span class="lineno"> 9 </span>    <span class="tok-k">return</span> <span class="tok-n">fmt</span><span class="tok-o">.</span><span class="tok-n">Println</span><span class="tok-p">(</span><span class="tok-s2">&quot;I can only be called inside my package&quot;</span><span class="tok-p">)</span>
+<span class="lineno">10 </span><span class="tok-p">}</span>
+<span class="lineno">11 </span>
+<span class="lineno">12 </span><span class="tok-c1"># This is a public method due to the capital letter</span>
+<span class="lineno">13 </span><span class="tok-n">func</span> <span class="tok-p">(</span><span class="tok-n">c</span> <span class="tok-o">*</span><span class="tok-no">ClassA</span><span class="tok-p">)</span> <span class="tok-no">Draw</span><span class="tok-p">()</span> <span class="tok-p">{</span>
+<span class="lineno">14 </span>    <span class="tok-n">fmt</span><span class="tok-o">.</span><span class="tok-n">Println</span><span class="tok-p">(</span><span class="tok-s2">&quot;I can be called from outside my package&quot;</span><span class="tok-p">)</span>
+<span class="lineno">15 </span><span class="tok-p">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As is seen in the above code snippet one can make some methods of a struct private and others public. Even structs can be declared private. This allows the base concept of encapsulation even if it is not as convenient like in other OOP languages as mentioned before. Calling the encapsulating functions public or private is not completely correct, since it is more of a controll mechanism to allow the export of a function, type or interface <a href="#IGO18">[IGO18]</a>.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If you declare a method with a parameter in front of the method name you can conveniently call it like for example "myStruct.myFunction()". The Go compiler compiles it like a normal parameter after the function name anyway. So this is just syntactic sugar which gives you the illusion to write and call a real OOP method <a href="#IGO18">[IGO18]</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_3_inheritance_with_go">5.3 Inheritance with Go</h3>
+<div class="paragraph">
+<p>The Go programming language does not implement inheritance in any way. This beeing said Go has is own way to map relationships between types. Therefore it uses composition instead of inheritance.</p>
+</div>
+<div class="paragraph">
+<p>Languages like Java and C&#43;&#43; require the programmer to know the relationships of his objects at first implementation. Additonaly multiple inheritance can get very complex very fast. Therefore the developers of Go made the choice to implement a lightweight alternative, which allows the implementation of relationships between types <a href="#FAQ20">[FAQ20]</a>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Inheritance alternative approach in Go</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="ruby"><span></span><span class="lineno">1 </span><span class="tok-c1"># Class A</span>
+<span class="lineno">2 </span><span class="tok-n">type</span> <span class="tok-no">ClassA</span> <span class="tok-n">struct</span> <span class="tok-p">{</span> <span class="tok-n">x</span><span class="tok-p">,</span> <span class="tok-n">y</span> <span class="tok-n">float64</span> <span class="tok-p">}</span>
+<span class="lineno">3 </span>
+<span class="lineno">4 </span><span class="tok-c1"># Class B extends ClassA</span>
+<span class="lineno">5 </span><span class="tok-n">type</span> <span class="tok-no">ClassB</span> <span class="tok-n">struct</span> <span class="tok-p">{</span>
+<span class="lineno">6 </span>    <span class="tok-n">c</span>     <span class="tok-no">ClassA</span>  <span class="tok-c1"># ClassB embedding a classA instance extends ClassA with the</span>
+<span class="lineno">7 </span>    <span class="tok-n">num</span>   <span class="tok-n">int</span>     <span class="tok-c1"># attributes of ClassB</span>
+<span class="lineno">8 </span><span class="tok-p">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That beeing said we do not speak so much of ClassA inherits from ClassB as ClassA extends ClassB by embedding a ClassB instance in the struct of ClassA. Go also supports overriding functions. Overloading a function like in Java however is not possible with Go <a href="#COP20">[COP20]</a>.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_4_polymorphism_with_go">5.4 Polymorphism with Go</h3>
+<div class="paragraph">
+<p>Since Go does not support inheritance but follows the principle of composition there is a different approach to polymorphism than usual. To achieve the treatment of different objects uniformely it implements interfaces implicitly <a href="#IGO18">[IGO18]</a>. This leads to a very intuitive approach as can be seen in the following code snipped.</p>
+</div>
+<div class="listingblock">
+<div class="title">Inheritance alternative approach in Go</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="ruby"><span></span><span class="lineno"> 1 </span><span class="tok-c1"># Interface for the ploymorphism methods</span>
+<span class="lineno"> 2 </span><span class="tok-n">type</span> <span class="tok-n">getAttributes</span> <span class="tok-n">interface</span> <span class="tok-p">{</span>
+<span class="lineno"> 3 </span>	<span class="tok-n">getArea</span><span class="tok-p">()</span> <span class="tok-n">float64</span>
+<span class="lineno"> 4 </span><span class="tok-p">}</span>
+<span class="lineno"> 5 </span>
+<span class="lineno"> 6 </span><span class="tok-n">type</span> <span class="tok-n">square</span> <span class="tok-n">struct</span> <span class="tok-p">{</span>
+<span class="lineno"> 7 </span>	<span class="tok-n">length</span> <span class="tok-n">float64</span>
+<span class="lineno"> 8 </span><span class="tok-p">}</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span><span class="tok-n">type</span> <span class="tok-n">rectangle</span> <span class="tok-n">struct</span> <span class="tok-p">{</span>
+<span class="lineno">11 </span>	<span class="tok-n">width</span>  <span class="tok-n">float64</span>
+<span class="lineno">12 </span>	<span class="tok-n">height</span> <span class="tok-n">float64</span>
+<span class="lineno">13 </span><span class="tok-p">}</span>
+<span class="lineno">14 </span><span class="tok-c1"># The implementation of getArea() for square</span>
+<span class="lineno">15 </span><span class="tok-n">func</span> <span class="tok-p">(</span><span class="tok-n">s</span> <span class="tok-n">square</span><span class="tok-p">)</span> <span class="tok-n">getArea</span><span class="tok-p">()</span> <span class="tok-n">float64</span> <span class="tok-p">{</span>
+<span class="lineno">16 </span>	<span class="tok-k">return</span> <span class="tok-n">s</span><span class="tok-o">.</span><span class="tok-n">length</span> <span class="tok-o">*</span> <span class="tok-mi">2</span>
+<span class="lineno">17 </span><span class="tok-p">}</span>
+<span class="lineno">18 </span><span class="tok-c1"># The implementation of getArea() for rectangle</span>
+<span class="lineno">19 </span><span class="tok-n">func</span> <span class="tok-p">(</span><span class="tok-n">r</span> <span class="tok-n">rectangle</span><span class="tok-p">)</span> <span class="tok-n">getArea</span><span class="tok-p">()</span> <span class="tok-n">float64</span> <span class="tok-p">{</span>
+<span class="lineno">20 </span>	<span class="tok-k">return</span> <span class="tok-n">r</span><span class="tok-o">.</span><span class="tok-n">width</span> <span class="tok-o">*</span> <span class="tok-n">r</span><span class="tok-o">.</span><span class="tok-n">height</span>
+<span class="lineno">21 </span><span class="tok-p">}</span>
+<span class="lineno">22 </span><span class="tok-c1"># The function to call to get the output for all objects with a getArea() method</span>
+<span class="lineno">23 </span><span class="tok-n">func</span> <span class="tok-n">calcArea</span><span class="tok-p">(</span><span class="tok-n">a</span> <span class="tok-n">getAttributes</span><span class="tok-p">)</span> <span class="tok-p">{</span>
+<span class="lineno">24 </span>	<span class="tok-n">fmt</span><span class="tok-o">.</span><span class="tok-n">Println</span><span class="tok-p">(</span><span class="tok-s2">&quot;The area of the attribute is:&quot;</span><span class="tok-p">,</span> <span class="tok-n">a</span><span class="tok-o">.</span><span class="tok-n">getArea</span><span class="tok-p">())</span>
+<span class="lineno">25 </span><span class="tok-p">}</span>
+<span class="lineno">26 </span>
+<span class="lineno">27 </span><span class="tok-n">func</span> <span class="tok-n">main</span><span class="tok-p">()</span> <span class="tok-p">{</span>
+<span class="lineno">28 </span>	<span class="tok-n">s</span> <span class="tok-p">:</span><span class="tok-o">=</span> <span class="tok-n">square</span><span class="tok-p">{</span><span class="tok-ss">length</span><span class="tok-p">:</span> <span class="tok-mi">4</span><span class="tok-p">}</span>
+<span class="lineno">29 </span>	<span class="tok-n">r</span> <span class="tok-p">:</span><span class="tok-o">=</span> <span class="tok-n">rectangle</span><span class="tok-p">{</span><span class="tok-ss">width</span><span class="tok-p">:</span> <span class="tok-mi">2</span><span class="tok-p">,</span> <span class="tok-ss">height</span><span class="tok-p">:</span> <span class="tok-mi">3</span><span class="tok-p">}</span>
+<span class="lineno">30 </span>	<span class="tok-n">calcArea</span><span class="tok-p">(</span><span class="tok-n">s</span><span class="tok-p">)</span> <span class="tok-c1"># The area of the attribute is: 8</span>
+<span class="lineno">31 </span>	<span class="tok-n">calcArea</span><span class="tok-p">(</span><span class="tok-n">r</span><span class="tok-p">)</span> <span class="tok-c1"># The area of the attribute is: 6</span>
+<span class="lineno">32 </span><span class="tok-p">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example code there are two structs that implenent the same function getArea(). Both have different approaches since rectangle and square areas are calculated differently. The interface getAttributes is basically a named collection for all method signatures defined by the interface. This interface allows the call of methods contained by it and therefore we can call the calcArea function on square and rectangle and the respective methods are called. This means that Go delivers a very intuitive way of polymorphism.</p>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_5_persistence_with_go">5.5 Persistence with Go</h3>
+<div class="paragraph">
+<p>As mentioned in chapter <a href="#_3_5_persistence">3.5 Persistence</a> OOP languages often use a garbage collector, which is responsible for deleting unused objects. Go also makes use of such a garbage collection. This results in the fact that the programmer does not need to care about deleting objects. On the other hand is Go no fit for programming a system with high safety requirements <a href="#IGO18">[IGO18]</a>.</p>
+</div>
 <div class="paragraph">
 <p><br>
 <br></p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_6_differences_between_go_and_objective_c_regarding_oop">6. Differences between Go and Objective-C regarding OOP</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After evaluating the two programming languages Go and Objective-C regarding their OOP characteristics in the chapters <a href="#_4_object_oriented_programming_in_objective_c">4. Object Oriented Programming in Objective-C</a> and <a href="#_5_object_oriented_programming_in_go">5. Object Oriented Programming in Go</a> we will now compare them and state out where it makes sense to use them.</p>
+</div>
+<div class="paragraph">
+<p>Objective-C does provide a straightforward approach on OOP while also delivering a simple syntax based on the C programming language. It comes with a lot of libraries to develop applications for Apples computers and smartphones. This support from Apple helps the developer in a big way. While Objective-C enables most of the OOP features in a easy way, it has two minor points to critisise.</p>
+</div>
+<div class="paragraph">
+<p>While multilevel inheritance in Objective-C is intuitive by just adding the parent class to the interface declaration, it whould be nice if Objective-C had also a solution for multiple inheritance. The second point to critisise relates to the persistence solution in Objective-C. The garbage collection is provided in just some of the target OS, while on others there is no garbage collection. The question whether a garbage collector makes sense cannot be answered here, but if it is possible to use one it should be available on all targets. If only to avoid programming errors.</p>
+</div>
+<div class="paragraph">
+<p>Nevertheless Objective-C is a intuitive programming language which delivers easy solutions for most of the OOP programming. Additionaly it has to be mentioned that Apple provides a good documentation for the language.</p>
+</div>
+<div class="paragraph">
+<p>The Go programming language is a prosperring language developed by Google and the Go community. It handles the difficulties of languages like C&#43;&#43; regarding memory management and compilation time. To do so it deliberately does not use a normal OOP approach. Since it is no OOP language one might say the comparison with an OOP language like Objective-C is easy, but it as stated in the chapter <a href="#_5_object_oriented_programming_in_go">5. Object Oriented Programming in Go</a> Go does provide a possibility to programm similar to OOP in all of the criteria considered. As conclusion it can be said that Go is no OOP language, but it can be used as one.</p>
+</div>
+<div class="paragraph">
+<p>As for the question which language is the better one regarding OOP there is no general answer. If the programmer wants to have the OOP functionalities in the language I whould recommend the usage of Objective-C. But as for the fact that Objective-C can only be used in the context of Apple products it does not pay off to learn this language if the programmer does not programm them often. Go on the other hand can be used in a wide area of use cases since it is not limited to one specific field. But Go also has its limitations. It does not fit well in programming of user interfaces. Objective-C has it main focus on this.</p>
+</div>
+<div class="paragraph">
+<p>That all being said the programmer has to decide which of the two languages he wants to use for his specific use case. But both of them provide him with solid solutions for OOP programming.</p>
+</div>
+<div class="paragraph">
+<p><br>
+<br></p>
+</div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect1">
@@ -598,6 +1186,59 @@ OOP
 <div class="sectionbody">
 <div class="hdlist">
 <table>
+<tr>
+<td class="hdlist1">
+COC20
+</td>
+<td class="hdlist2">
+<p><a id="COC20"></a> Website, developer.apple.com, called 2020-12-09, <br>
+<a href="https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Initialization/Initialization.html" class="bare">https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Initialization/Initialization.html</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+COP20
+</td>
+<td class="hdlist2">
+<p><a id="COP20"></a> Johannes Weigend, Concepts of Programming Languages, called 2020-12-03, <br>
+<a href="https://github.com/jweigend/concepts-of-programming-languages" class="bare">https://github.com/jweigend/concepts-of-programming-languages</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+FAQ20
+</td>
+<td class="hdlist2">
+<p><a id="FAQ20"></a> Website, golang.org, called 2020-12-03, <br>
+<a href="https://golang.org/doc/faq#Is_Go_an_object-oriented_language" class="bare">https://golang.org/doc/faq#Is_Go_an_object-oriented_language</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+GOL20
+</td>
+<td class="hdlist2">
+<p><a id="GOL20"></a> Website, golang.org, called 2020-12-03, <br>
+<a href="https://golang.org/" class="bare">https://golang.org/</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+KOP09
+</td>
+<td class="hdlist2">
+<p><a id="KOP09"></a> Arnd Poetzsch-Heffter, Konzepte objektorientierter Programmierung, Rev. 2, 2009, Springer</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+IGO18
+</td>
+<td class="hdlist2">
+<p><a id="IGO18"></a> Website, medium.com, called on 2019-12-03, <br>
+<a href="https://medium.com/gophersland/gopher-vs-object-oriented-golang-4fa62b88c701" class="bare">https://medium.com/gophersland/gopher-vs-object-oriented-golang-4fa62b88c701</a></p>
+</td>
+</tr>
 <tr>
 <td class="hdlist1">
 OC209
@@ -608,31 +1249,29 @@ OC209
 </tr>
 <tr>
 <td class="hdlist1">
-DEP15
+POC20
 </td>
 <td class="hdlist2">
-<p><a id="DEP15"></a> Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, Design Patterns - Entwurfsmuster als Elemente wiederverwendbarer objektorientierter Software, 2015, Mitp</p>
+<p><a id="POC20"></a> Website, developer.apple.com, called 2020-12-09, <br>
+<a href="https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html" class="bare">https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html</a></p>
 </td>
 </tr>
-</table>
-</div>
-<div class="paragraph">
-<p><br>
-<br></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_list_of_figures">List of Figures</h2>
-<div class="sectionbody">
-<div class="hdlist">
-<table>
 <tr>
 <td class="hdlist1">
-<a href="#img-go_example_call">[img-go_example_call]</a> 
+POL20
 </td>
 <td class="hdlist2">
-<p>Method call syntax in Go</p>
+<p><a id="POL20"></a> Website, duden.de, called 2020-12-02, <br>
+<a href="https://www.duden.de/rechtschreibung/Polymorphismus" class="bare">https://www.duden.de/rechtschreibung/Polymorphismus</a></p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+WSP20
+</td>
+<td class="hdlist2">
+<p><a id="WSP20"></a> Lucas Lukac, getstream.io, called 2020-12-03, <br>
+<a href="https://getstream.io/blog/switched-python-go/" class="bare">https://getstream.io/blog/switched-python-go/</a></p>
 </td>
 </tr>
 </table>
@@ -643,7 +1282,7 @@ DEP15
 <div id="footer">
 <div id="footer-text">
 Version 1.00.00<br>
-Last updated 2020-12-02 08:30:13 +0100
+Last updated 2020-12-10 08:00:29 +0100
 </div>
 </div>
 </body>
