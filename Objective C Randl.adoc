@@ -1,7 +1,7 @@
 // Header
 = Comparison Object Oriented Programming in Objective-C with GO
 Thomas Martin Randl <thomas.m.randl@stud.th-rosenheim.de>
-v1.00.00, 2020-12-10
+v1.00.00, 2021-01-07
 :awestruct-layout: base
 :showtitle:
 :prev_section: defining-frontmatter
@@ -71,7 +71,7 @@ OS:: Operating System
 
 == 1. Introduction
 
-Object Oriented Programming (OOP) is a very popular and a wiedely used approach to develop all kinds of applications nowadays. To do so there are a lot of programming languages from which the developer can choose.
+Object Oriented Programming (OOP) is a very popular and a widely used approach to develop all kinds of applications nowadays. To do so, there are a lot of programming languages from which the developer can choose.
 
 The following chapters provide an overview of OOP in terms of its historical development and functionality. Afterward the two programming languages Objective-C and Go are compared based on their OOP capabilities.
 
@@ -81,11 +81,11 @@ The following chapters provide an overview of OOP in terms of its historical dev
 
 == 2. History of OOP
 
-The first approach for Object Oriented Programming was more than 40 years ago with the programming language Simula 67. However the first language to be really successful with this new approach in programming was Smalltalk. These languages fullfilled the basics needed for OOP. With a slow and steady development OOP became a more and more used concept in new developed programming languages <<KOP09>>.
+The first approach to Object Oriented Programming was more than 40 years ago with the programming language Simula 67. However the first language to be really successful with this new approach in programming was Smalltalk. These languages fulfilled the basics needed for OOP. With a slow and steady development, OOP became a more and more used concept in new developed programming languages <<KOP09>>.
 
 Since the teaching of programming languages like Java took place in a wide range of university classes, OOP became more and more relevant to companies. This lies in the fact that graduates from all over the world tend to know how to use at least one OOP language. The fact that more and more companies made use of OOP languages in their software solutions pushed their popularity even further.
 
-Nowadays OOP is the most spread concept between all programming languages. Besides their teaching all over the globe their popularity can be derived from the fact that problems from the real world can easily be transfered into the programming world. It is simple to imagine a button in a graphical interface to be an object with certain properties. Even non OOP languages nowadays tend to use object similar approaches as you can see with the programming language Go in Chapter <<5. Object Oriented Programming in Go>> <<KOP09>>. Sometimes this works out well, but the OOP approach turns out to be the better way in most of this cases.
+Nowadays OOP is the most spread concept between all programming languages. Besides their teaching all over the globe their popularity can be derived from the fact that problems from the real world can easily be transferred into the programming world. It is simple to imagine a button in a graphical interface to be an object with certain properties. Even non OOP languages nowadays tend to use object similar approaches as you can see with the programming language Go in Chapter <<5. Object Oriented Programming in Go>> <<KOP09>>. Sometimes this works out well, but the OOP approach turns out to be the better way in most of these cases.
 
 {empty} +
 {empty} +
@@ -93,7 +93,7 @@ Nowadays OOP is the most spread concept between all programming languages. Besid
 
 == 3. Object Oriented Programming
 
-As we learned in chapter <<2. History of OOP>>, OOP is a widely spread concept in modern programming languages. It takes proceedings from the real world into a programming context. This is because of the fact that you can declare every instance from the real world as an object. These objects on the other hand can be put in context and interact with each other. These traits of OOP are called classification and inheritance. With that in mind every object needs his own class with its own methods to interact with each other <<KOP09>>. In the following chapter we will learn how a class in OOP is structured and what base concepts OOP uses to set classes in context with each other and how they are visibile outside of the object. The extend to which a programming language uses these concepts defines how much of an OOP language it is.
+As we learned in chapter <<2. History of OOP>>, OOP is a widely spread concept in modern programming languages. It takes proceedings from the real world into a programming context. This is because of the fact that you can declare every instance from the real world as an object. These objects on the other hand can be put in context and interact with each other. These traits of OOP are called classification and inheritance. With that in mind every object needs his own class with its own methods to interact with each other <<KOP09>>. In the following chapter we will learn how a class in OOP is structured and what base concepts OOP uses to set classes in context with each other and how they are visible outside of the object. The extend to which a programming language uses these concepts defines how much of an OOP language it is.
 
 {empty} +
 
@@ -101,15 +101,15 @@ As we learned in chapter <<2. History of OOP>>, OOP is a widely spread concept i
 
 Classification is a technique used to classify objects due to their skills. During the process objects are structured (chapter <<3.3 Inheritance>>) and the skills are assigned to the objects class. 
 
-A class describes and implements a new type of object. Objects in OOP are derived from that class. Every class consists of several attributes and methods. An object kann be created using the class as kind of a datatype with parameters. The added parameters are assigned to the attributes in the constructor of the class. The created object interacts independently from other objects with the environment using the methods provided by the base class.
+A class describes and implements a new type of object. Objects in OOP are derived from that class. Every class consists of several attributes and methods. An object can be created using the class as kind of a data type with parameters. The added parameters are assigned to the attributes in the constructor of the class. The created object interacts independently from other objects in the environment using the methods provided by the base class.
 
-The methods of a class are declared in an interface. This can be used by other classes to interact with the classes objects using these methods <<KOP09>>.
+The methods of a class are declared in an interface. This can be used by other classes to interact with the class objects using these methods <<KOP09>>.
 
 {empty} + 
 
 === 3.2 Encapsulation
 
-Encapsulation is used for hiding the objects information from the environent. It is uesd to protect the attributes values of the object from manipulation. This is done by declaring the attributes visibility. If an attribute is declared as not visible from outside the object it can only be accessed by using methods declared in the inteface of the objects class. Methods can also be declared in different visibility states depending on the programming language.
+Encapsulation is used for hiding the object information from the environment. It is used to protect the attributes values of the object of manipulation. This is done by declaring the attribute visibility. If an attribute is declared as not visible from outside the object, it can only be accessed by using methods declared in the interface of the object class. Methods can also be declared in different visibility states depending on the programming language.
 
 An encapsulated object can only be interacted with via the methods declared in the interface. Every attribute or method not mentioned in the interface is neither accessible nor visible from outside <<KOP09>>.
 
@@ -119,7 +119,7 @@ An encapsulated object can only be interacted with via the methods declared in t
 
 As in chapter <<3.1 Classification>> mentioned, Objects in OOP are structured by their skills and abilities. In OOP every Object is derived from a parent object. The resulting child object is able to use the functionality of the parent and its own.  This property is called inheritance. 
 
-With the use of inheritance it is possible to reuse the previous defined structures or to make use of an abstract object which can be specified in the child object. This helps the programmer to reduce the complexitiy and effort of the programm.
+With the use of inheritance, it is possible to reuse the previous defined structures or to make use of an abstract object which can be specified in the child object. This helps the programmer to reduce the complexity and effort of the program.
 
 Especially the use of an abstract class can be very useful. This is the case when a program makes use of different objects that contain several equal attributes. In this case the abstract class defines the base attributes and the child objects inherit them and implement their functionality for them <<KOP09>>.
 
@@ -127,7 +127,7 @@ Especially the use of an abstract class can be very useful. This is the case whe
 
 === 3.4 Polymorphism
 
-A synonym for polimorphism is diversity. Taking this into the context of programming languages, polymorphism is the approach to accept and return values of more than one datatype.
+A synonym for polymorphism is diversity. Taking this into the context of programming languages, polymorphism is the approach to accept and return values of more than one data type.
 
 OOP uses this functionality with its inheritance (chapter <<3.3 Inheritance>>). This allows the use of different objects as parameters and/or return values.
 
@@ -137,7 +137,7 @@ OOP uses this functionality with its inheritance (chapter <<3.3 Inheritance>>). 
 
 Persistence stands for the lifetime an object exists in the program after it is created. There are some different approaches depending on the used programming language. While in C{plus}{plus} the user is responsible for deleting the created objects after their use expired, languages like Java use a so called "garbage collector". 
 
-Having this in mind, languages with a garbage collector are for no use in safety related software, because a fast reaction to a problem can not be guaranteeed if the garbage collector interrupts the programm at the exact moment of a emergency. An automatic memory management on the other hand is much less bug prone due to the lower complexity <<KOP09>>.
+Having this in mind, languages with a garbage collector are for no use in safety related software, because a fast reaction to a problem cannot be guaranteed if the garbage collector interrupts the program at the exact moment of an emergency. An automatic memory management on the other hand is much less bug prone due to the lower complexity <<KOP09>>.
 
 
 {empty} +
@@ -152,13 +152,13 @@ In 2007 the Apple company introduced the first IPhone. In the same year Apple re
 
 Today Objective-C is the primary programming language for OS X and iOS applications. Due to the combination of the C syntax, types and flow control statements with the possibility to define classes and methods, it suits optimal to develop these applications because of the fact that they use OOP mostly all of the time. 
 
-To develop these applications apple provides his own integrated development environment with the name Xcode. It is also necessary to use a Mac computer to use this application, because it is only available in the Mac App Store <<POC20>>. As for the fact that Objective-C is a pure OOP language it provides all the features discussed in chapter <<3. Object Oriented Programming>>. The following chapters explain how they work and what may be speciall about them.
+To develop these applications apple provides his own integrated development environment with the name Xcode. It is also necessary to use a Mac computer to use this application, because it is only available in the Mac App Store <<POC20>>. As for the fact that Objective-C is a pure OOP language, it provides all the features discussed in chapter <<3. Object Oriented Programming>>. The following chapters explain how they work and what may be special about them.
 
 === 4.1 Classification with Objective-C
 
-The usage of classes in Objective-C is a very common task. This is because of the fact, that it is used to develop applications and every part of an application either is an object or communicates with one. Apple provides a large library of predefined classes with the names Cocoa (Mac OS X) and Cocoa Touch (IOs). These classes can either be used directly or personalised for the applications purpose.
+The usage of classes in Objective-C is a very common task. This is because of the fact, that it is used to develop applications and every part of an application either is an object or communicates with one. Apple provides a large library of predefined classes with the names Cocoa (Mac OS X) and Cocoa Touch (IOs). These classes can either be used directly or personalised for the application purpose.
 
-Since everything in Objective-C can be achieved with classes they are structured very similar to Java or C{plus}{plus} classes. As can be read in chapter <<4.3 Inheritance with Objective-C>> all classes are inheritad from the root class NSObject. Every Objective-C class has an @interface and @implementation section. While the @interface usually is located in the header file .h the @implementation is implemented in the source file with the file ending .m. 
+Since everything in Objective-C can be achieved with classes they are structured very similar to Java or C{plus}{plus} classes. As can be read in chapter <<4.3 Inheritance with Objective-C>> all classes are inherited from the root class NSObject. Every Objective-C class has an @interface and @implementation section. While the @interface usually is located in the header file .h the @implementation is implemented in the source file with the file ending .m. 
 
 The @interface section of the class defines its name, parent class (e.g. NSObject), attributes and methods. It is used to define the contents of the class and for other class instances to see what methods can be called on the objects of the class. The following example shows how this can be implemented.
 
@@ -192,7 +192,7 @@ The implementation of the defined methods can be done as follows.
 @end
 ----
 
-To create a instance of a class in Objective-C you have to allocate memory and initialize it first. Afterwards you can interact with the object. If your class does not provide an own init function the init function calls the NSObjects init function as default. The alloc function is implemented in NSObject as well <<OC209>>. 
+To create an instance of a class in Objective-C you have to allocate memory and initialize it first. Afterwards you can interact with the object. If your class does not provide an own init function the init function calls the NSObjects init function as default. The alloc function is implemented in NSObject as well <<OC209>>. 
 
 .Example implementation of the initialisation and usage of a object in Objective-C
 [source,ruby,linenums]
@@ -204,7 +204,7 @@ MyClass *myInstance = [[MyClass alloc] init];
 [myInstance setAttributes: 3: 'c'];
 ----
 
-TIP: As for the fact that a Objective-C compiler is able to compile C and C{plus}{plus} code it is possible to combine C, C{plus}{plus} and Objective-C Code in one file and compile it.
+TIP: As for the fact that an Objective-C compiler is able to compile C and C{plus}{plus} code it is possible to combine C, C{plus}{plus} and Objective-C Code in one file and compile it.
 
 {empty} +
 
@@ -212,9 +212,9 @@ TIP: As for the fact that a Objective-C compiler is able to compile C and C{plus
 
 In Objective-C one can implement attributes in the following three states of protection:
 
-* *private* (Accessable only from within the class)
-* *protected* (Accessable only from within the class and its subclasses)
-* *public* (Accessable in the whole programm)
+* *private* (Accessible only from within the class)
+* *protected* (Accessible only from within the class and its subclasses)
+* *public* (Accessible in the whole program)
 
 Therefore Objective-C supports encapsulation. The way it is achieved however is more laborious than in similar programming languages like Java.
 
@@ -233,15 +233,15 @@ Attributes which are declared in the interface are visible per default. To chang
 @end
 ----
 
-WARNING: The problem with the nonatomic attribute of the @property tag is the fact, that it can not be guaranteed that it is accessible at this exact moment due to other threads accessing it <<POC20>>. 
+WARNING: The problem with the nonatomic attribute of the @property tag is the fact, that it cannot be guaranteed that it is accessible at this exact moment due to other threads accessing it <<POC20>>. 
 
-TIP: To call a method of the class inside of another method of the same class you can use the keyword self. This refers to the class and the compiler is able to asign the correct method. An example call whould be [self mySecondMethod] <<OC209>>. 
+TIP: To call a method of the class inside of another method of the same class you can use the keyword self. This refers to the class and the compiler is able to asign the correct method. An example call would be [self mySecondMethod] <<OC209>>. 
 
 {empty} +
 
 === 4.3 Inheritance with Objective-C
 
-Objective-C supports multilevel inheritance. Therefore a class can inherit all methods and attributes of a parent class. On top of all classes in Objective-C is the NSObject class as root object. All classes below inherit its methods. It is also possible to overwrite functions from a parent class. This has the effect, that the new implementation for this function will be executed when called on an object from this class. The instance attributes defined in the parent class can also be accessed in the child class <<OC209>>.
+Objective-C supports multilevel inheritance. Therefore a class can inherit all methods and attributes of a parent class. On top of all classes in Objective-C is the NSObject class as the root object. All classes below inherit its methods. It is also possible to overwrite functions from a parent class. This has the effect, that the new implementation of this function will be executed when called on an object from this class. The instance attributes defined in the parent class can also be accessed in the child class <<OC209>>.
 
 .Example inheritance in Objective-C
 [source,ruby,linenums]
@@ -249,7 +249,7 @@ Objective-C supports multilevel inheritance. Therefore a class can inherit all m
 @interface MyClass: MyParentClass
 ----
 
-WARNING: Objective-C does not provide a mechanism for multiple inheritance. Therefore a class can only inherit one parentclass.
+WARNING: Objective-C does not provide a mechanism for multiple inheritance. Therefore a class can only inherit one parent class.
 
 {empty} +
 
@@ -261,11 +261,11 @@ Objective-C supports polymorphism. The compiler is able to determine which metho
 
 === 4.5 Persistence with Objective-C
 
-As it is common in OOP languages Objective-C has a garbage collector. Its purpose is to delete unused objects like it is statet in chapter <<3.5 Persistence>>. Regardless of this fact it is proper style to delete instances of classes after they are not needed anymore. This has two main reasons.
+As it is common in OOP languages, Objective-C has a garbage collector. Its purpose is to delete unused objects like it is stated in chapter <<3.5 Persistence>>. Regardless of this fact, it is proper style to delete instances of classes after they are not needed anymore. This has two main reasons.
 
-First of all the Objective-C garbage collector is not available on all apple plattforms like e.g. the IPhone. Additional Objective-C is a derivative of C. As it is common knowledge C and C{plus}{plus} are languages where it is essential to maintain the device storage by yourself. If it is not done properly it results in unnecessary high storage workload and can even lead to a crash of the OS. Therefore the maintenance of the programs instances should be taken care of very carefully in Objective-C. 
+First of all the Objective-C garbage collector is not available on all apple platforms like e.g. the IPhone. Additional Objective-C is a derivative of C. As it is common knowledge C and C{plus}{plus} are languages where it is essential to maintain the device storage by yourself. If it is not done properly it results in unnecessary high storage workload and can even lead to a crash of the OS. Therefore the maintenance of the programs instances should be taken care of very carefully in Objective-C. 
 
-To release the memory used by an instance you just need to add a command like seen in the following code snippet after the instance is not needed anymore.
+To release the memory used by an instance, you just need to add a command like seen in the following code snippet after the instance is not needed anymore.
 
 .Example release of an instance in Objective-C
 [source,ruby,linenums]
@@ -282,7 +282,7 @@ The release function like alloc and init does not need to be implemented by the 
 
 == 5. Object Oriented Programming in Go
 
-The programming language Go was introduced by Google in 2009. It has been develoed since by a team at google and a lot of other contributors from the open source community. The BSD style license it was released with allowed the community the further development to this day .
+The programming language Go was introduced by Google in 2009. It has been developed since by a team at google and a lot of other contributors from the open source community. The BSD style license it is released with allowed the community the further development to this day.
 
 Its initial cause was to create a language that is more accessible and save than C/C{plus}{plus} in terms of syntax, compile time and functionality. The focus was to develop an easier solution for scalable network services and cloud computing. 
 Whilst Go differs in many ways from the C programming language, its roots with this language are preserved in the fact, that it still uses C like pointers. But they do not support pointer arithmetic which is because of the fact, that Go puts his focus on fast compiling <<GOL20>>.
@@ -290,13 +290,13 @@ Whilst Go differs in many ways from the C programming language, its roots with t
 Go does a balancing act between velocity and accessibility. Its purpose is to deliver a solution which is faster than competing languages like python <<WSP20>> and more accessible than the really fast languages C and C{plus}{plus}. 
 Sadly Go does not fit well with GUI development or the development of embedded systems <<COP20>>.  
 
-In terms of OOP even Google is not sure whether or not Go is an OOP language. The total abscence of some features, which are discussed later in this chapter, could lead to the conclussion that Go simply is no OOP language. But at least it can be argued, that Go allows an OOP like style of programming <<IGO18>>. The degree to which Go differs from classic programming languages like C{plus}{plus} or Java will be discussed in the following chapters.
+In terms of OOP even Google is not sure whether or not Go is an OOP language. The total absence of some features, which are discussed later in this chapter, could lead to the conclusion that Go simply is no OOP language. But at least it can be argued, that Go allows an OOP like style of programming <<IGO18>>. The degree to which Go differs from classic programming languages like C{plus}{plus} or Java will be discussed in the following chapters.
 
 {empty} +
 
 === 5.1 Classification with Go
 
-Go does not provide a classic syntax for creating a class. Go does not even provide classes in general. To achive a classification Go uses structs similar to structs in the C programming language. The following code snipped shows how a class is implemented in Go.
+Go does not provide a classic syntax for creating a class. Go does not even provide classes in general. To achieve a classification Go uses structs similar to structs in the C programming language. The following code snippet shows how a class is implemented in Go.
 
 .Example for a class in Go
 [source,ruby,linenums]
@@ -313,7 +313,7 @@ func (c ClassA) SayName() {
 }
 ----
 
-This states out that a struct is a user defined type that can hold a list of attributes. In combination with functions using the struct as base, as shown in the snippet, Go is able to offer similar functionality than other languages by using classes <<COP20>>. 
+This states out that a struct is a user defined type that can hold a list of attributes. In combination with functions using the struct as a base, as shown in the snippet, Go is able to offer similar functionality than other languages by using classes <<COP20>>. 
 
 {empty} +
 
@@ -343,7 +343,7 @@ func (c *ClassA) Draw() {
 }
 ----
 
-As is seen in the above code snippet one can make some methods of a struct private and others public. Even structs can be declared private. This allows the base concept of encapsulation even if it is not as convenient like in other OOP languages as mentioned before. Calling the encapsulating functions public or private is not completely correct, since it is more of a controll mechanism to allow the export of a function, type or interface <<IGO18>>.
+As is seen in the above code snippet one can make some methods of a struct private and others public. Even structs can be declared private. This allows the base concept of encapsulation even if it is not as convenient like in other OOP languages as mentioned before. Calling the encapsulating functions public or private is not completely correct, since it is more of a control mechanism to allow the export of a function, type or interface <<IGO18>>.
 
 TIP: If you declare a method with a parameter in front of the method name you can conveniently call it like for example "myStruct.myFunction()". The Go compiler compiles it like a normal parameter after the function name anyway. So this is just syntactic sugar which gives you the illusion to write and call a real OOP method <<IGO18>>. 
 
@@ -351,9 +351,9 @@ TIP: If you declare a method with a parameter in front of the method name you ca
 
 === 5.3 Inheritance with Go
 
-The Go programming language does not implement inheritance in any way. This beeing said Go has is own way to map relationships between types. Therefore it uses composition instead of inheritance.
+The Go programming language does not implement inheritance in any way. This being said, Go has is own way to map relationships between types. Therefore, it uses composition instead of inheritance.
 
-Languages like Java and C{plus}{plus} require the programmer to know the relationships of his objects at first implementation. Additonaly multiple inheritance can get very complex very fast. Therefore the developers of Go made the choice to implement a lightweight alternative, which allows the implementation of relationships between types <<FAQ20>>.
+Languages like Java and C{plus}{plus} require the programmer to know the relationships of his objects at first implementation. Additonaly, multiple inheritance can get very complex very fast. Therefore the developers of Go made the choice to implement a lightweight alternative, which allows the implementation of relationships between types <<FAQ20>>.
 
 .Inheritance alternative approach in Go
 [source,ruby,linenums]
@@ -368,13 +368,13 @@ type ClassB struct {
 }
 ----
 
-That beeing said we do not speak so much of ClassA inherits from ClassB as ClassA extends ClassB by embedding a ClassB instance in the struct of ClassA. Go also supports overriding functions. Overloading a function like in Java however is not possible with Go <<COP20>>.
+That being said, we do not speak so much of ClassA inherits from ClassB, as ClassA extends ClassB by embedding a ClassB instance inside the struct of ClassA. Go also supports overriding functions. Overloading a function like in Java, however is not possible with Go <<COP20>>.
 
 {empty} +
 
 === 5.4 Polymorphism with Go
 
-Since Go does not support inheritance but follows the principle of composition there is a different approach to polymorphism than usual. To achieve the treatment of different objects uniformely it implements interfaces implicitly <<IGO18>>. This leads to a very intuitive approach as can be seen in the following code snipped. 
+Since Go does not support inheritance, but follows the principle of composition there is a different approach to polymorphism than usual. To achieve the treatment of different objects uniformly it implements interfaces implicitly <<IGO18>>. This leads to a very intuitive approach as can be seen in the following code snippet. 
 
 .Inheritance alternative approach in Go
 [source,ruby,linenums]
@@ -413,7 +413,7 @@ func main() {
 }
 ----
 
-In this example code there are two structs that implenent the same function getArea(). Both have different approaches since rectangle and square areas are calculated differently. The interface getAttributes is basically a named collection for all method signatures defined by the interface. This interface allows the call of methods contained by it and therefore we can call the calcArea function on square and rectangle and the respective methods are called. This means that Go delivers a very intuitive way of polymorphism.
+In this example code there are two structs that implement the same function getArea(). Both have different approaches since rectangle and square areas are calculated differently. The interface getAttributes is basically a named collection for all method signatures defined by the interface. This interface allows the call of methods contained by it and therefore we can call the calcArea function on square and rectangle and the respective methods are called. This means that Go delivers a very intuitive way of polymorphism.
 
 {empty} +
 
@@ -429,15 +429,15 @@ As mentioned in chapter <<3.5 Persistence>> OOP languages often use a garbage co
 
 After evaluating the two programming languages Go and Objective-C regarding their OOP characteristics in the chapters <<4. Object Oriented Programming in Objective-C>> and <<5. Object Oriented Programming in Go>> we will now compare them and state out where it makes sense to use them.
 
-Objective-C does provide a straightforward approach on OOP while also delivering a simple syntax based on the C programming language. It comes with a lot of libraries to develop applications for Apples computers and smartphones. This support from Apple helps the developer in a big way. While Objective-C enables most of the OOP features in a easy way, it has two minor points to critisise. 
+Objective-C does provide a straightforward approach on OOP while also delivering a simple syntax based on the C programming language. It comes with a lot of libraries to develop applications for Apple computers and smartphones. This support from Apple helps the developer in a big way. While Objective-C enables most of the OOP features in an easy way, it has two minor points to criticize. 
 
-While multilevel inheritance in Objective-C is intuitive by just adding the parent class to the interface declaration, it whould be nice if Objective-C had also a solution for multiple inheritance. The second point to critisise relates to the persistence solution in Objective-C. The garbage collection is provided in just some of the target OS, while on others there is no garbage collection. The question whether a garbage collector makes sense cannot be answered here, but if it is possible to use one it should be available on all targets. If only to avoid programming errors. 
+While multilevel inheritance in Objective-C is intuitive by just adding the parent class to the interface declaration, it would be nice if Objective-C had also a solution for multiple inheritance. The second point to criticize relates to the persistence solution in Objective-C. The garbage collection is provided in just some of the target OS, while on others there is no garbage collection. The question whether a garbage collector makes sense cannot be answered here, but if it is possible to use one it should be available for all targets. If only to avoid programming errors. 
 
-Nevertheless Objective-C is a intuitive programming language which delivers easy solutions for most of the OOP programming. Additionaly it has to be mentioned that Apple provides a good documentation for the language.
+Nevertheless Objective-C is an intuitive programming language which delivers easy solutions for most of the OOP programming. Additionally it has to be mentioned that Apple provides a good documentation for the language.
 
-The Go programming language is a prosperring language developed by Google and the Go community. It handles the difficulties of languages like C{plus}{plus} regarding memory management and compilation time. To do so it deliberately does not use a normal OOP approach. Since it is no OOP language one might say the comparison with an OOP language like Objective-C is easy, but it as stated in the chapter <<5. Object Oriented Programming in Go>> Go does provide a possibility to programm similar to OOP in all of the criteria considered. As conclusion it can be said that Go is no OOP language, but it can be used as one.
+The Go programming language is a prospering language developed by Google and the Go community. It handles the difficulties of languages like C{plus}{plus} regarding memory management and compilation time. To do so, it deliberately does not use a normal OOP approach. Since it is no OOP language one might say the comparison with an OOP language like Objective-C is easy, but it as stated in the chapter <<5. Object Oriented Programming in Go>> Go does provide a possibility to program similar to OOP in all of the criteria considered. As a conclusion, it can be said that Go is no OOP language, but it can be used as one.
 
-As for the question which language is the better one regarding OOP there is no general answer. If the programmer wants to have the OOP functionalities in the language I whould recommend the usage of Objective-C. But as for the fact that Objective-C can only be used in the context of Apple products it does not pay off to learn this language if the programmer does not programm them often. Go on the other hand can be used in a wide area of use cases since it is not limited to one specific field. But Go also has its limitations. It does not fit well in programming of user interfaces. Objective-C has it main focus on this.
+As for the question which language is the better one regarding OOP there is no general answer. If the programmer wants to have the OOP functionalities in the language I would recommend the usage of Objective-C. But as for the fact that Objective-C can only be used in the context of Apple products it does not pay off to learn this language if the programmer does not program them often. Go on the other hand can be used in a wide area of use cases since it is not limited to one specific field. But Go also has its limitations. It does not fit well in programming of user interfaces. Objective-C has its main focus on this.
 
 That all being said the programmer has to decide which of the two languages he wants to use for his specific use case. But both of them provide him with solid solutions for OOP programming.
 
