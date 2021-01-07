@@ -1,2 +1,2 @@
-# compare_oop_objective_c_and_golang
+# Comparison Object Oriented Programming in Objective-C with GO
 This thesis clarifies the question of what distinguishes object-oriented languages ​​and how Object Oriented Programming works in general. Afterwards two of the representatives of these programming languages ​​Objective-C and Go are checked for the OOP criteria and compared with one another. Finally, a recommendation for action is made as to which of the languages ​​should be used and when.
